@@ -1,0 +1,190 @@
+.all_products{
+    max-width: 1320px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+
+}
+
+.title{
+    align-self: center;
+
+
+    text-align: center;
+}
+.title_text{
+    font-family: 'Kadwa', sans-serif;
+    font-weight: 400;
+    color: #9FADDE;
+}
+.one_card{
+    border: 1px solid #757575;
+    border-radius: 4px ;
+    max-width: 267px;
+    margin-left: 2%;
+    margin-top: 2%;
+    padding: 1%;
+
+
+}
+.product_image{
+    max-width: 204px;
+    align-self: center;
+    margin-top: 20%;
+
+    padding-right: 10%;
+
+
+}
+
+.text_name{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #6A6A6A;
+    text-align: center;
+    max-width: 168px;
+
+    margin-left: 10%;
+
+
+}
+.text_price{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #6A6A6A;
+    margin-top: 5%;
+    margin-left: 7%;
+
+}
+.add_to_cart{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+
+    margin-top: 7%;
+    margin-bottom: 10%;
+
+}
+.item_count_wrapper{
+    display: flex;
+    flex-direction: row;
+}
+.items__control_plus{
+    color: #605959;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    border-left:1px solid #959595 ;
+    border-top:1px solid #959595 ;
+    border-bottom:1px solid #959595 ;
+    padding: 7%;
+}
+.items__control_minus{
+    color: #605959;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    border-right:1px solid #959595 ;
+    border-top:1px solid #959595 ;
+    border-bottom:1px solid #959595 ;
+    padding: 7%;
+}
+.input_number{
+    border: 1px solid #959595;
+    max-width: 33px;
+    text-align: center;
+}
+input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+.button{
+    background-color:#96CAE7;
+    color: white;
+    border-style: none;
+    padding: 8px 35px;
+    border-radius: 2px;
+    max-height: 25px;
+    margin-top: 1%;
+
+
+}
+.button:hover{
+    background-color: #249ADC;
+    transition: 0.5s;
+}
+.paginator{
+
+    list-style-type:none;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+
+    align-content: center;
+    margin: 4.5% auto;
+    max-width: 500px;
+    max-height: 70px;
+}
+.pags{
+    color: #707070;
+    font-family: 'Kadwa', sans-serif;
+    margin-left: 3%;
+    font-weight: 400;
+}
+@media (max-width:1872px){
+    .title{
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+    .title_text{
+        font-size: 36px;
+    }
+    .one_card_border{
+        width: 267px;
+        height: 415px;
+    }
+    .text_name{
+        font-size: 10px;
+        height: 40px;
+
+    }
+    .text_price{
+        font-size: 13px;
+    }
+    .button{
+        font-size: 10px;
+    }
+}
+@media (min-width: 1920px){
+    .title{
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+    .title_text{
+        font-size: 36px;
+    }
+    .one_card_border{
+        width: 267px;
+        height: 415px;
+    }
+    .text_name{
+        font-size: 10px;
+        height: 35px;
+    }
+    .text_price{
+        font-size: 13px;
+    }
+    .button{
+        font-size: 10px;
+    }
+}

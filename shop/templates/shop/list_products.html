@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{% endblock %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'shop/css/list_products.css' %}">{% endblock %}
+{% block content %}
+    <div class="all_products_center">
+        <div class="title"><h1 class="title_text">Наша продукция</h1></div>
+        <div class="all_products">
+            {% for product in object_list %}
+                    <div class="one_card">
+                        <a href="products/{{product.id}}">
+                            <img src="{{ product.image.url }}" alt="" class="product_image" align="center">
+                            <h1 class="text_name">{{ product.name }}</h1>
+                        </a>
+                        <h2 class="text_price">{{ product.price }}</h2>
+                        <div class="add_to_cart">
+                            <div class="item_count_wrapper">
+                                <div class="items__control_plus" data-action="minus">-</div>
+                                <input type="number" max="20" min="1" value="1" class="input_number" >
+                                <div class="items__control_minus" data-action="plus">+</div>
+                            </div>
+                            <button type="submit" class="button">В корзину</button>
+                        </div>
+                    </div>
+
+            {% endfor %}
+        </div>
+        <div class="paginator">
+            {% for p in page_obj.paginator.page_range  %}
+                <li class="pags_border">
+                    <a href="?{{ q }}page={{ p }}" class="pags">{{ p }}</a>
+                </li>
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <script src="{% static "shop/js/products_list.js" %}"></script>
+{% endblock %}

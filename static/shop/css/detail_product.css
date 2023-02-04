@@ -1,0 +1,327 @@
+.content{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}
+.product_with_price{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+}
+.photo_block{
+    border: 1px solid #9F9F9F;
+}
+.photo{
+
+    max-width: 406px;
+}
+.product_text{
+    margin-top: auto;
+    margin-left: 10%;
+    max-width: 1100px;
+}
+.product_title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+.short_description{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #898989;
+    margin-top: 10%;
+}
+.price{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 3%;
+}
+.add_to_cart{
+    display: flex;
+    flex-direction: row;
+
+    max-width: 550px;
+
+
+    margin-top: 7%;
+    margin-bottom: 10%;
+
+}
+.item_count_wrapper{
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    max-height: 40px;
+}
+.items__control_plus{
+    color: #605959;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    border-right:1px solid #959595 ;
+
+    border-top:1px solid #959595 ;
+    border-bottom:1px solid #959595 ;
+
+
+
+}
+.items__control_minus{
+    color: #605959;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    text-align: center;
+    border-left:1px solid #959595 ;
+    border-top:1px solid #959595 ;
+    border-bottom:1px solid #959595 ;
+
+}
+.input_number{
+    border: 1px solid #959595;
+    max-width: 33px;
+    text-align: center;
+}
+input::-webkit-outer-spin-button,
+        input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+
+        input[type=number] {
+            -moz-appearance: textfield;
+        }
+.button{
+    background-color:#96CAE7;
+    color: white;
+    border-style: none;
+    padding: 12px 50px;
+    border-radius: 2px;
+    max-height: 56px;
+    margin-top: 1%;
+    margin-left: 10%;
+
+
+}
+.button:hover{
+    background-color: #249ADC;
+    transition: 0.5s;
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+.menu_text{
+    border-bottom: 1px solid #D9D9D9;
+}
+#menu_text_left{
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #58CBCB;
+}
+#menu_text_central{
+    margin-left: 5%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #58CBCB;
+}
+#menu_text_right{
+    margin-left: 5%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #58CBCB;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+
+}
+.description_title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color:#404040;
+
+}
+.points{
+    margin-top: 3%;
+    max-width: 1500px;
+}
+.point{
+    color: #3D3D3D;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 1%;
+}
+.point::marker{
+    color:#58CBCB;
+}
+.all_description_text{
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.description_text{
+    margin-top: 1%;
+    max-width: 1500px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #3D3D3D;
+}
+.structure{
+    max-width: 1400px;
+}
+.structure_title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color:#404040;
+}
+.all_structure_without_table{
+    margin-top: 2%;
+}
+.one_structure_text{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: #767676;
+}
+.table{
+    display: flex;
+    flex-direction: column;
+
+    margin: 5% 0;
+
+
+}
+.one_point_of_table{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    border: 1px solid #999999;
+    padding: 1%;
+    color:#434343;
+}
+.method_of_application{
+    max-width:1400px;
+    margin-bottom: 2%;
+}
+.method_of_application_title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color:#404040;
+}
+.one_method_of_application{
+    margin-top: 2%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color:#3D3D3D;
+}
+@media (max-width:1872px){
+    .product_title{
+        font-size: 36px;
+    }
+    .short_description{
+        font-size: 26px;
+    }
+    .price{
+        font-size: 26px;
+    }
+    .item_count_wrapper{
+        width: 170px;
+    }
+    .items__control_minus{
+        font-size: 20px;
+        padding: 4%;
+    }
+    .items__control_plus{
+        font-size: 20px;
+        padding: 4%;
+    }
+    .button{
+        font-size: 20px;
+    }
+    #menu_text_right{
+        font-size: 13px;
+    }
+    #menu_text_central{
+        font-size: 13px;
+    }
+    #menu_text_left{
+        font-size: 13px;
+    }
+    .description_title{
+        font-size: 32px;
+    }
+    .point{
+        font-size: 23px;
+    }
+    .description_text{
+        font-size: 23px;
+    }
+    .structure_title{
+        font-size: 32px;
+    }
+    .one_structure_text{
+        font-size: 24px;
+    }
+    .method_of_application_title{
+        font-size: 32px;
+    }
+    .one_method_of_application{
+        font-size: 24px;
+    }
+}
+
+@media (max-width:1920px){
+    .product_title{
+        font-size: 36px;
+    }
+    .short_description{
+        font-size: 26px;
+    }
+    .price {
+        font-size: 26px;
+    }
+    .item_count_wrapper{
+        width: 170px;
+    }
+    .items__control_minus{
+        font-size: 20px;
+        padding: 4%;
+    }
+    .items__control_plus{
+        font-size: 20px;
+        padding: 4%;
+    }
+    .button{
+        font-size: 20px;
+    }
+    #menu_text_right{
+        font-size: 13px;
+    }
+    #menu_text_central{
+        font-size: 13px;
+    }
+    #menu_text_left{
+        font-size: 13px;
+    }
+    .description_title{
+        font-size: 35px;
+    }
+    .point{
+        font-size: 25px;
+    }
+    .description_text{
+        font-size: 25px;
+    }
+    .structure_title{
+        font-size: 32px;
+    }
+    .one_structure_text{
+        font-size: 24px;
+    }
+    .method_of_application_title{
+        font-size: 32px;
+    }
+    .one_method_of_application{
+        font-size: 24px;
+    }
+}

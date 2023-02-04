@@ -1,0 +1,311 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+.body{
+    font-family: 'Inter', sans-serif;
+
+}
+.content{
+    display: flex;
+    justify-content: center;
+}
+
+.header{
+    width:100%;
+    box-sizing: border-box;
+    margin-top: 1%;
+}
+.top_header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.top_left_header{
+    display: flex;
+    flex-direction: row;
+    padding-left: 10%;
+    justify-content: space-between;
+    align-items: center;
+}
+.top_right_header{
+    margin-right: 4%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.logo{
+
+    max-width: 93px;
+    max-height: 91px;
+}
+.search_control{
+
+    font-family: 'Inter', sans-serif;
+    -webkit-appearance: none;
+    width: 334px;
+    height: 58px;
+    background-image: url("/static/shop/img/lupa.svg");
+    background-position-y: 50% ;
+    background-position-x: 95%;
+    background-size: 8% ;
+    background-repeat:no-repeat;
+    border: 1px solid #655D5D;
+    padding: 0 16px;
+
+}
+
+
+.phone_number{
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+}
+#roznichnie_prodaszi{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    color: #bcbcbc;
+}
+#roznichnie_prodaszi_phone{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+}
+.basket_block{
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+
+}
+.basket{
+    max-height: 33px;
+    max-width: 40px;
+    fill:#655D5D;
+}
+.basket_text_class{
+    margin-left: 10px;
+}
+.link_basket{
+    margin-right: 10%;
+    text-decoration: none;
+    color: black;
+
+}
+.basket_text_class{
+    vertical-align: center;
+}
+#basket_text{
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+.navbar{
+    background-color: #6478BD;
+    width: 100%;
+
+
+}
+.text_navbar{
+
+    padding: 19px 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+
+
+}
+.one_text_navbar{
+    font-family: 'Inter', sans-serif;
+    color: white;
+    font-weight: 400;
+    border-right: 1px solid white ;
+    padding-right: 16px;
+}
+a{
+    text-decoration: none;
+}
+
+.footer{
+    border-top: 1px solid #EAE2E2 ;
+    display: flex;
+    flex-direction: row;
+    max-height: 230px;
+}
+.logo_with_text_in_footer{
+    align-items: center;
+    max-width: 138px;
+    border-right: 1px solid #EAE2E2;
+    padding: 3% 5%;
+}
+.all_rights_reserved{
+    margin-top: 30%;
+    font-weight: 400;
+    font-family: 'Kelly Slab', cursive;
+    color: #626262;
+}
+.info_in_footer{
+    align-items: center;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.pin_and_adress{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+.geo_location{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.map_pin{
+    max-width: 18px;
+}
+#office_adress{
+    color: #706868;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    max-width: 200px;
+    margin-left: 2%;
+}
+.office_adress_text{
+
+}
+#working_hours{
+    color: #706868;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 10%;
+    margin-left: 12%;
+    max-width: 200px;
+}
+
+.section{
+    color: black;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+.section_text{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+.instagram_logo{
+    max-width: 19px;
+}
+.vk_logo{
+    max-width: 19px;
+}
+.social_media_logos{
+    margin-top: 10px;
+}
+.roznichnie_zakazi{
+    display: flex;
+    flex-direction: column;
+}
+.optovie_zakazi{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+.phone_number_footer{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+.text_prodazh_footer{
+    color:#354788;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+@media (max-width:1872px){
+    .info_in_footer{
+        margin-left: 6%;
+        margin-right: 6%;
+    }
+    .office_adress_text{
+        font-size: 10px;
+    }
+    .search_control{
+        height: 40px;
+        width: 270px;
+    }
+    .text_navbar{
+        width: 900px;
+    }
+    .one_text_navbar{
+        font-size: 16px;
+    }
+    .top_left_header{
+        width: 400px;
+    }
+    .top_right_header{
+        width: 600px;
+    }
+    .all_rights_reserved{
+        font-size: 10px;
+    }
+    #office_adress{
+        font-size: 10px;
+    }
+    #working_hours{
+        font-size: 10px;
+    }
+    .section{
+        font-size: 15px;
+    }
+    .text_prodazh_footer{
+        font-size: 16px;
+    }
+    .phone_number_footer{
+        font-size: 16px;
+    }
+}
+@media (min-width: 1920px){
+    .info_in_footer{
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .office_adress_text{
+        font-size: 10px;
+    }
+    .text_navbar{
+        max-width: 1200px;
+    }
+    .one_text_navbar{
+        font-size: 16px;
+    }
+    .top_left_header{
+        width: 500px;
+    }
+    .top_right_header{
+        width: 600px;
+    }
+    .all_rights_reserved{
+        font-size: 10px;
+    }
+    #office_adress{
+        font-size: 10px;
+    }
+    #working_hours{
+        font-size: 10px;
+    }
+    .section{
+        font-size: 15px;
+    }
+    .text_prodazh_footer{
+        font-size: 16px;
+    }
+    .phone_number_footer{
+        font-size: 16px;
+    }
+}

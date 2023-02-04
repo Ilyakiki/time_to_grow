@@ -1,0 +1,100 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Kadwa&family=Kelly+Slab&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'shop/css/base.css'%}">
+    {% block css %}{% endblock %}
+</head>
+<body>
+    <header class="header">
+        <div class="top_header">
+            <div class="top_left_header">
+                <img src="{% static 'shop/img/Time_to_grow_logo.jpg' %}" alt="" class="logo">
+                <form action="{% url 'search' %}" method="get" class="form">
+                    <input type="search" placeholder="Поиск Товаров" name="q" class="search_control" required="">
+                    <button type="submit" class="btn1">
+                        <span class="search" aria-hidden="true"></span>
+                    </button>
+                </form>
+
+            </div>
+
+            <div class="top_right_header">
+
+                <div class="phone_number">
+
+                    <h3 id="roznichnie_prodaszi_phone">+7 (981) 012-80-69</h3>
+                    <h3 id="roznichnie_prodaszi">Розничные продажи:</h3>
+                </div>
+                <a href="#" class="link_basket">
+                    <div class="basket_block">
+                        <img src="{% static 'shop/img/basket_icon.svg'%}" alt="" class="basket">
+                        <div class="basket_text_class">
+                            <h3 id="basket_text">Корзина</h3>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <nav class="navbar">
+            <div class="text_navbar">
+                <div class="border_one_text_navbar"><a href="#"><h2 class="one_text_navbar">Где Купить</h2></a></div>
+                <div class="border_one_text_navbar"><a href="#"><h2 class="one_text_navbar">Продукция</h2></a></div>
+                <div class="border_one_text_navbar"><a href="#"><h2 class="one_text_navbar">О нас</h2></a></div>
+                <div class="border_one_text_navbar"><a href="#"><h2 class="one_text_navbar">Контакты</h2></a></div>
+                <div class="border_one_text_navbar"><a href="#"><h2 class="one_text_navbar">Доставка и оплата</h2></a></div>
+            </div>
+        </nav>
+
+    </header>
+        <div class="content">
+            {% block content %}
+            {% endblock %}
+        </div>
+    <footer class="footer">
+        <div class="logo_with_text_in_footer">
+            <img src="{% static 'shop/img/Time_to_grow_logo.jpg' %}" alt="" class="logo">
+            <h3 class="all_rights_reserved">Компания «TIME TO GROW» Все права защищены © 2023</h3>
+        </div>
+        <div class="info_in_footer">
+            <div class="geo_location">
+                <div class="pin_and_adress">
+                    <img src="{% static 'shop/img/map-pin.svg' %}" alt="" class="map_pin">
+                    <div id="office_adress"><h3 class="office_adress_text">г. Санкт Петербург, Заневский пр., дом 37, офис 137</h3></div>
+                </div>
+                <div id="working_hours"><h3 class="office_adress_text">Время работы: пн-пт 10:00 - 18:00</h3></div>
+            </div>
+
+            <div class="sections_block">
+                <div ><a href="#" class="section"><h3 class="section_text">Где купить</h3></a></div>
+                <div class="section"><a href="#" class="section"><h3 class="section_text">FAQ</h3></a></div>
+                <div class="section"><a href="#" class="section"><h3 class="section_text">Доставка и оплата</h3></a></div>
+                <div class="section"><a href="#" class="section"><h3 class="section_text">Контакты</h3></a></div>
+                
+                <div class="social_media_logos">
+                    <a href="#"><img src="{% static 'shop/img/instagram_logo.svg' %}" alt="" class="instagram_logo"></a>
+                    <a href="#"><img src="{% static 'shop/img/vk_logo.svg' %}" alt="" class="vk_logo"></a>
+                </div>
+            </div>
+            <div class="phones_numbers">
+                <div id="roznichnie_zakazi">
+                    <h2 class="phone_number_footer">+7 (981) 012-80-69</h2>
+                    <h2 class="text_prodazh_footer">Розничные продажи</h2>
+                </div>
+                <div id="optovie_zakazi">
+                    <h2 class="phone_number_footer">+7 (981) 012-80-69</h2>
+                    <h2 class="text_prodazh_footer">оптовые продажи</h2>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

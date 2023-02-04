@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{% endblock %}
+{% block css %}<link rel="stylesheet" href="{% static 'shop/css/detail_product.css'%}">{% endblock %}
+{% block content %}
+    <div class="content">
+        <div class="product_with_price">
+            <div class="photo_block">
+                <img src="{{ object.image.url }}" alt="" class="photo">
+            </div>
+            <div class="product_text">
+                <div class="product_title">
+                    {{ object.name }}
+                </div>
+                <div class="short_description">
+                    {{ object.short_description }}
+                </div>
+                <div class="price">
+                    {{ object.price }}
+                </div>
+                <div class="add_to_cart">
+                    <div class="item_count_wrapper">
+                        <div class="items__control_minus" data-action="minus"> - </div>
+                        <input type="number" max="20" min="1" value="1" class="input_number" >
+                        <div class="items__control_plus" data-action="plus"> + </div>
+                    </div>
+                    <button type="submit" class="button">В корзину</button>
+                </div>
+            </div>
+        </div>
+         <div class="menu">
+             <div class="menu_text" id="menu_text_left"><h2>ОПИСАНИЕ ТОВАРА</h2></div>
+             <div class="menu_text" id="menu_text_central"><h2>СОСТАВ ТОВАРА</h2></div>
+             <div class="menu_text" id="menu_text_right"><h2>СПОСОБ ПРИМЕНЕНИЯ</h2></div>
+        </div>
+        <div class="description" style="display: none">
+            <h2 class="description_title">Описание товара</h2>
+            <div class="points">
+                {% for point in object.description_points.all %}
+                    <li class="point">{{ point.name }}</li>
+                {% endfor %}
+            </div>
+
+            <div class="all_description_text">
+                {% for stroka in object.description_text %}
+                    <h2 class="description_text">{{ stroka }}</h2>
+                {% endfor %}
+            </div>
+        </div>
+            <div class="structure" style="display: none">
+                <h2 class="structure_title">Состав:</h2>
+                <div class="all_structure_without_table">
+
+                    {% for str in object.structure%}
+                        <h2 class="one_structure_text">{{ str }}</h2>
+                        <br>
+                    {% endfor %}
+                </div>
+                {% if object.ingredients_table.all %}
+                    <div>
+                        <table class="table" cellspacing="0">
+                            {% for ingridient in object.ingredients_table.all %}
+                                <tr ><td class="one_point_of_table">{{ ingridient.name }}</td><td class="one_point_of_table">{{ ingridient.description }}</td><tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                {% endif %}
+            </div>
+        <div class="method_of_application" style="display: none">
+            <h2 class="method_of_application_title">Cпособ применения</h2>
+            {% for method in object.method_of_application %}
+                <h2 class="one_method_of_application">{{ method }}</h2>
+            {% endfor %}
+        </div>
+        <div style="display: none">
+            <img src="{{ object.declaration.url }}" alt="">
+        </div>
+    </div>
+    <script src="{% static "shop/js/products_list.js" %}"></script>
+    <script src="{% static "shop/js/detail_product.js" %}"></script>
+{% endblock %}
