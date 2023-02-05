@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{% endblock %}
+{% block css %}<link rel="stylesheet" href="{% static 'shop/css/basket_detail.css' %}">{% endblock %}
+{% block content %}
+    <div class="all_products">
+        <h1>Корзина</h1>
+
+        {% for item in cart %}
+            {% with product=item.product %}
+            <div class="one_card">
+                <img src="{{ product.image.url }}" alt="" class="one_image">
+                <div class="all_text_on_card">
+                    <h2 class="title_product">{{ product.name }}</h2>
+
+                    <h2 class="price_one_good">{{ product.price }}</h2>
+
+                    <h2 class="quantity" style="display: none">{{ item.quantity }}</h2>
+                    <h2 class="total_price_one_good">{{ item.total_price }}</h2>
+                </div>
+            </div>
+            {% endwith %}
+        {% endfor %}
+        <h2>{{ cart.get_total_price}}</h2>
+    </div>
+{% endblock %}

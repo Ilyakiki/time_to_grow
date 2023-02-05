@@ -1,6 +1,6 @@
-console.log('Hi')
-window.addEventListener('click',function (event){
 
+window.addEventListener('click',function (event){
+    console.log(event.target)
 
     if (event.target.dataset.action === 'plus'){
         const CountWrapper = event.target.closest('.item_count_wrapper')
@@ -8,7 +8,7 @@ window.addEventListener('click',function (event){
 
         if (parseInt(counter.value)<20){
         counter.value= ++counter.value
-        console.log(counter.value)}
+        }
     }
 
     if (event.target.dataset.action === 'minus'){
@@ -16,6 +16,6 @@ window.addEventListener('click',function (event){
         const counter = CountWrapper.querySelector("input[type=number]")
         if (parseInt(counter.value)>1){
         counter.value= --counter.value
-        console.log(counter.value)}
+        }
     }
 })

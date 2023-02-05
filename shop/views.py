@@ -4,10 +4,12 @@ from django.shortcuts import render,get_object_or_404
 from django.views.generic import ListView, DetailView
 from itertools import chain
 from django.utils.text import slugify
+from cart.forms import CartAddProductForm
 # Create your views here.
 
 
-
+def about_us(request):
+    return render(request,'shop/about_us.html')
 class ListProducts(ListView):
     '''Список Товаров'''
     paginate_by = 10  # Пагинация
@@ -19,6 +21,12 @@ class ListProducts(ListView):
         queryset = super().get_queryset()
         queryset = queryset.filter(available=True)
         return queryset
+
+    def get_context_data(self, *args, object_list=None, **kwargs):
+        context = super(ListProducts, self).get_context_data(**kwargs)
+        context['form'] = CartAddProductForm
+        return context
+
 
 '''def show_all_products(request):
     products=Product.objects.all()
@@ -33,13 +41,16 @@ class DetailProduct(DetailView):
     '''Детальное представление продукта'''
     template_name = 'shop/detail_product.html'
     model = Product
-
     def get_context_data(self,*args, **kwargs):
-
-        self.object.structure= self.object.structure.split('\r\n')
+        '''self.object.structure= self.object.structure.split('\r\n')
         self.object.description_text=self.object.description_text.split('\r\n')
-        self.object.method_of_application = self.object.method_of_application.split('\r\n')
-        return super(DetailProduct, self).get_context_data()
+        self.object.method_of_application = self.object.method_of_application.split('\r\n')''' """дописать"""
+        context = super(DetailProduct, self).get_context_data(**kwargs)
+        context['object'].structure = context['object'].structure.split('\r\n')
+        context['object'].description_text=context['object'].description_text.split('\r\n')
+        context['object'].method_of_application = context['object'].method_of_application.split('\r\n')
+        context['form'] = CartAddProductForm
+        return context
 
 
 

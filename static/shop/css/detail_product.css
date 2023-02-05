@@ -46,6 +46,10 @@
     margin-bottom: 10%;
 
 }
+form{
+    display: flex;
+    flex-direction: row;
+}
 .item_count_wrapper{
     margin-top: 2%;
     display: flex;
@@ -79,6 +83,7 @@
     border: 1px solid #959595;
     max-width: 33px;
     text-align: center;
+
 }
 input::-webkit-outer-spin-button,
         input::-webkit-inner-spin-button {
@@ -97,14 +102,12 @@ input::-webkit-outer-spin-button,
     border-radius: 2px;
     max-height: 56px;
     margin-top: 1%;
-    margin-left: 10%;
-
-
 }
 .button:hover{
     background-color: #249ADC;
     transition: 0.5s;
 }
+
 .menu{
     display: flex;
     flex-direction: row;
@@ -235,8 +238,11 @@ input::-webkit-outer-spin-button,
         font-size: 20px;
         padding: 4%;
     }
-    .button{
+    .button_text{
         font-size: 20px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        white-space: nowrap;
     }
     #menu_text_right{
         font-size: 13px;
@@ -291,8 +297,11 @@ input::-webkit-outer-spin-button,
         font-size: 20px;
         padding: 4%;
     }
-    .button{
+    .button_text{
         font-size: 20px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        white-space: nowrap;
     }
     #menu_text_right{
         font-size: 13px;

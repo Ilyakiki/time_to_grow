@@ -15,12 +15,17 @@
                         </a>
                         <h2 class="text_price">{{ product.price }}</h2>
                         <div class="add_to_cart">
-                            <div class="item_count_wrapper">
-                                <div class="items__control_plus" data-action="minus">-</div>
-                                <input type="number" max="20" min="1" value="1" class="input_number" >
-                                <div class="items__control_minus" data-action="plus">+</div>
-                            </div>
-                            <button type="submit" class="button">В корзину</button>
+                            <form action="{% url 'cart:cart_add' product_id=product.id %}" method="post" class="form">
+
+                                {% csrf_token %}
+                                <div class="item_count_wrapper">
+                                    <div class="items__control_minus" data-action="minus">-</div>
+                                    {{ form }}
+                                    <div class="items__control_plus" data-action="plus">+</div>
+                        </div>
+
+                        <div class="button_div"><button type="submit" class="button"><h2 class="button_text">В корзину</h2></button></div>
+                    </form>
                         </div>
                     </div>
 
