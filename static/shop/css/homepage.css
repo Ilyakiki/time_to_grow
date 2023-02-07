@@ -1,17 +1,19 @@
-.banner{
-    width: 100%;
 
-}
 
 @media (max-width:1919px){
     .banner{
-        height: 400px;
-        background-image: url("/static/shop/img/banner_comp.jpg");
+        width: 100%;
     }
 }
 @media (min-width:1920px){
     .banner{
-        height: 400px;
-        background-image: url("/static/shop/img/banner_comp.jpg");
+        width: 100%;
     }
+}
+@media (max-width:1919px){
+
+    .banner{
+        width: 100%;
+    }
+
 }

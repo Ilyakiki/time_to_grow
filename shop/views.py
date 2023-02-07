@@ -16,7 +16,8 @@ def homepage(request):
     return render(request,'shop/homepage.html')
 def about_us(request):
     return render(request,'shop/about_us.html')
-
+def FAQ(request):
+    return render(request,'shop/FAQ.html')
 class ListProducts(ListView):
     '''Список Товаров'''
     paginate_by = 10  # Пагинация

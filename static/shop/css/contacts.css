@@ -131,3 +131,61 @@
         font-size: 24px;
     }
 }
+@media (max-width:440px){
+    .all_content{
+        margin:0;
+        flex-direction: column;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .left_coloumn{
+        max-width: 300px;
+    }
+    .contact_title{
+        font-size: 10px;
+        max-width: 50px;
+        border-bottom: 1px solid #72DAE0;
+    }
+    .contact_content{
+        margin-top: 5%;
+        font-size: 9px;
+    }
+    .our_adress_title{
+        font-size: 10px;
+        max-width: 55px;
+        border-bottom: 1px solid #72DAE0;
+    }
+    .one_point_of_adress{
+        font-size: 9px;
+    }
+    .sales{
+        max-width: 170px;
+    }
+    .sales_title{
+        max-width: 150px;
+        font-size: 10px;
+        border-bottom: 1px solid #72DAE0;
+    }
+    .requisites{
+        margin-top: 5%;
+    }
+    .phone_number_email{
+        font-size: 9px;
+    }
+    .icon{
+        max-width: 10px;
+    }
+    .requisites_title{
+        font-size: 10px;
+        max-width: 55px;
+        border-bottom: 1px solid #72DAE0;
+    }
+    .ip_inn_orgnip{
+        font-size: 9px;
+    }
+    .map_image{
+        max-width: 440px;
+        width: 270px;
+        height: 188px;
+    }
+}

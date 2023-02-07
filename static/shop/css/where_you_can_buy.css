@@ -108,8 +108,9 @@
     }
     .map_comp{
         max-width: 440px;
-        width: 255px;
-        height: 121px;
+        width: 270px;
+        height: 190px;
+        margin-top: 3%;
     }
     .where_buy_text{
         font-size: 7px;

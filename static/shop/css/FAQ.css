@@ -1,0 +1,85 @@
+.content_FAQ{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    margin-top: 1%;
+
+}
+.content_text{
+    display: flex;
+    flex-direction: column;
+    margin-top: 1%;
+    margin-bottom: 3%;
+}
+.point{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 3%;
+}
+.point::marker{
+    color:#58CBCB;
+}
+.point_text{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    margin-top: 1%;
+}
+@media(max-width: 1919px){
+    .title{
+        font-size: 26px;
+        border-bottom: 2px solid #58CBCB;
+        max-width: 70px;
+    }
+    .content_text{
+        max-width: 1600px;
+    }
+    .point{
+        font-size: 26px;
+    }
+    .point::marker{
+        width: 23px;
+    }
+    .point_text{
+        font-size: 26px;
+    }
+}
+@media(min-width: 1920px){
+    .title{
+        font-size: 26px;
+        border-bottom: 2px solid #58CBCB;
+        max-width: 70px;
+    }
+    .content_text{
+        max-width: 1600px;
+    }
+    .point{
+        font-size: 26px;
+    }
+    .point::marker{
+        width: 23px;
+    }
+    .point_text{
+        font-size: 26px;
+    }
+}
+@media (max-width: 440px) {
+    .title{
+        font-size: 15px;
+        border-bottom: 2px solid white;
+    }
+    .content_text{
+        max-width: 250px;
+    }
+    .point{
+        font-size: 11px;
+    }
+    .point::marker{
+        width: 4px;
+    }
+    .point_text{
+        font-size: 11px;
+    }
+}
