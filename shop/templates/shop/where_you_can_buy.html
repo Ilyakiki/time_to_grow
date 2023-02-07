@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{% endblock %}
+{% block css %}<link rel="stylesheet" href="{% static 'shop/css/where_you_can_buy.css'%}">{% endblock %}
+{% block content %}
+    <div class="all_content">
+        <div class="all_text">
+            <div class="where_buy">
+                <div class="where_buy_and_icon">
+                    <h2 class="where_buy_title">Где купить</h2>
+                    <img src="{% static 'shop/img/where_buy.svg' %}" alt="" class="icon">
+                </div>
+                <div>
+                    <h2 class="where_buy_text">Продажа профессиональной линии «Time to grow»</h2>
+                </div>
+            </div>
+            <div class="our_adress_all">
+                <h2 class="our_adress_title">Наш адрес</h2>
+                <div class="adress">
+                    <h2 class="one_point_of_adress">195112, г. Санкт-Петербург, Заневский пр., дом 37,  офис 137</h2>
+                    <h2 class="one_point_of_adress">м. Новочеркасская</h2>
+                    <h2 class="one_point_of_adress">Время работы: пн-пт 10:00 - 18:00</h2>
+                </div>
+            </div>
+        </div>
+        <div class="map">
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A96a987f51881a9aeb0c3d5d88f375973411ce59ac83cbb2fa03c6ea1c18fa0c3&amp;source=constructor" width="1200" height="600" frameborder="0" class="map_comp"></iframe>
+            <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A96a987f51881a9aeb0c3d5d88f375973411ce59ac83cbb2fa03c6ea1c18fa0c3&amp;source=constructor" width="320" height="240" frameborder="0" style="display: none" class="map_mobile"></iframe>
+        </div>
+    </div>
+{% endblock %}

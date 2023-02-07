@@ -69,6 +69,9 @@ form{
 
 
 }
+.form_quantity{
+    text-align: center;
+}
 .items__control_minus{
     color: #605959;
     font-family: 'Inter', sans-serif;
@@ -217,7 +220,7 @@ input::-webkit-outer-spin-button,
     font-weight: 400;
     color:#3D3D3D;
 }
-@media (max-width:1872px){
+@media (max-width:1919px){
     .product_title{
         font-size: 36px;
     }
@@ -276,7 +279,7 @@ input::-webkit-outer-spin-button,
     }
 }
 
-@media (max-width:1920px){
+@media (min-width:1920px){
     .product_title{
         font-size: 36px;
     }

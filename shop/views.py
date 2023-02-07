@@ -7,9 +7,16 @@ from django.utils.text import slugify
 from cart.forms import CartAddProductForm
 # Create your views here.
 
+def where_buy(request):
+    return render(request,'shop/where_you_can_buy.html')
 
+def contacts(request):
+    return render(request,'shop/contacts.html')
+def homepage(request):
+    return render(request,'shop/homepage.html')
 def about_us(request):
     return render(request,'shop/about_us.html')
+
 class ListProducts(ListView):
     '''Список Товаров'''
     paginate_by = 10  # Пагинация

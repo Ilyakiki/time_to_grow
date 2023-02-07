@@ -92,6 +92,9 @@
 
 
 }
+.form_quantity{
+    text-align: center;
+}
 .items__control_minus{
     color: #605959;
     font-family: 'Inter', sans-serif;
@@ -151,20 +154,19 @@ input::-webkit-outer-spin-button,
     list-style-type:none;
     display: flex;
     flex-direction: row;
-    justify-content:center;
+    justify-content:space-between;
 
     align-content: center;
     margin: 4.5% auto;
-    max-width: 500px;
+    max-width: 50px;
     max-height: 70px;
 }
 .pags{
     color: #707070;
     font-family: 'Kadwa', sans-serif;
-    margin-left: 3%;
     font-weight: 400;
 }
-@media (max-width:1872px){
+@media (max-width:1919px){
     .title{
         margin-top: 40px;
         margin-bottom: 20px;

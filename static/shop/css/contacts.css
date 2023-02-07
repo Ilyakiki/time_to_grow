@@ -1,0 +1,133 @@
+.all_content{
+    margin: 5% 0;
+    display: flex;
+    flex-direction: row;
+
+}
+.left_coloumn{
+    display: flex;
+    flex-direction: column;
+    margin-right: 1%;
+}
+.right_coloumn{
+    display: flex;
+    flex-direction: column;
+    margin-left: 1%;
+}
+.contact_title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    border-bottom: 3px solid #72DAE0;
+    max-width: 190px;
+}
+.contact_content{
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    margin-top: 10%;
+}
+.our_adress{
+    margin-top: 5%;
+}
+.our_adress_title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    border-bottom: 3px solid #72DAE0;
+    max-width: 180px;
+}
+.adress_content{
+    margin-top: 7%;
+}
+.one_point_of_adress{
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+
+}
+.sales{
+    margin-top: 5%;
+}
+.sales_title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    border-bottom: 3px solid #72DAE0;
+    max-width: 590px;
+}
+.number_and_email_and_icon{
+    display: flex;
+    flex-direction: row;
+    margin-top: 2%;
+    justify-content: flex-start;
+}
+.phone_number_email{
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+.icon{
+    margin-left: 2%;
+    max-width: 25px;
+}
+.requisites_title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    border-bottom: 3px solid #72DAE0;
+    max-width: 215px;
+}
+.ip_inn_orgnip{
+    margin-top: 1%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+.map{
+    margin-top: 7%;
+}
+@media (max-width:1919px){
+    .contact_title{
+        font-size: 40px;
+    }
+    .contact_content{
+        font-size: 24px;
+    }
+    .our_adress_title{
+        font-size: 32px;
+    }
+    .one_point_of_adress{
+        font-size: 24px;
+    }
+    .sales_title{
+        font-size: 40px;
+    }
+    .phone_number_email{
+        font-size: 24px;
+    }
+    .requisites_title{
+        font-size: 40px;
+    }
+    .ip_inn_orgnip{
+        font-size: 24px;
+    }
+}
+@media (min-width:1920px){
+    .contact_title{
+        font-size: 40px;
+    }
+    .contact_content{
+        font-size: 24px;
+    }
+    .our_adress_title{
+        font-size: 32px;
+    }
+    .one_point_of_adress{
+        font-size: 24px;
+    }
+    .sales_title{
+        font-size: 40px;
+    }
+    .phone_number_email{
+        font-size: 24px;
+    }
+    .requisites_title{
+        font-size: 40px;
+    }
+    .ip_inn_orgnip{
+        font-size: 24px;
+    }
+}

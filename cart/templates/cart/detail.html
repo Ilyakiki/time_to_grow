@@ -4,23 +4,62 @@
 {% block css %}<link rel="stylesheet" href="{% static 'shop/css/basket_detail.css' %}">{% endblock %}
 {% block content %}
     <div class="all_products">
-        <h1>Корзина</h1>
+        {% if cart %}
 
         {% for item in cart %}
             {% with product=item.product %}
             <div class="one_card">
                 <img src="{{ product.image.url }}" alt="" class="one_image">
                 <div class="all_text_on_card">
-                    <h2 class="title_product">{{ product.name }}</h2>
+                   <h2 class="title_product">{{ product.name }}</h2>
+                    <div class="text_without_title">
+                        <h2 class="price_one_good">{{ product.price }}</h2>
 
-                    <h2 class="price_one_good">{{ product.price }}</h2>
-
-                    <h2 class="quantity" style="display: none">{{ item.quantity }}</h2>
-                    <h2 class="total_price_one_good">{{ item.total_price }}</h2>
+                        <h2 class="quantity">{{ item.quantity }}</h2>
+                        <h2 class="total_price_one_good">{{ item.total_price }}</h2>
+                        <a href="{% url "cart:cart_remove" product.id%}" class="trash_link"><img src="{% static 'shop/img/trash_icon.svg' %}" alt="" class="trash"></a>
+                    </div>
                 </div>
             </div>
             {% endwith %}
         {% endfor %}
-        <h2>{{ cart.get_total_price}}</h2>
+            <div class="total_price_and_checkout">
+                <h2 class="total_price_all_goods">Сумма</h2>
+                <h2 class="total_price_all_goods" id="border">{{ cart.get_total_price}}</h2>
+                <a href="{% url "orders:order_create" %}" class="next"><h2 class="next_text">Далее</h2></a>
+            </div>
+            {% else %}
+                <br>
+                <br>
+                <br>
+                <h2 class="your_basket_is_empty">Ваша Корзина пуста</h2>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+        {% endif %}
     </div>
 {% endblock %}

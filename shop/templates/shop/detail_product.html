@@ -16,7 +16,7 @@
                     {{ object.short_description }}
                 </div>
                 <div class="price">
-                    {{ object.price }}
+                    {{ object.price }} &#8381;
                 </div>
                 <div class="add_to_cart">
                     <form action="{% url 'cart:cart_add' product_id=object.id %}" method="post" class="form">

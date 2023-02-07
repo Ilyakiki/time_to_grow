@@ -1,10 +1,15 @@
+.your_basket_is_empty{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
 .all_products{
     display: flex;
     flex-direction: column;
 }
 
 .one_card{
-    margin-top: 10%;
+    margin-top: 3%;
+
     display: flex;
     flex-direction: row;
     border:1px solid #EAEAEA;
@@ -14,31 +19,108 @@
     max-width: 130px;
 }
 .all_text_on_card{
-    margin: auto 0;
+    margin: auto 3%;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    width: 100%;
+
+
 }
+
 .title_product{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
     color: #424242;
-    text-align: center;
-    margin-left: 3%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 2%;
+
+}
+.text_without_title{
+    display: flex;
+    flex-direction: row;
+    margin-left: 10%;
+    margin-right: 7%;
 }
 .price_one_good{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    margin-left: 3%;
+
+
+}
+.quantity{
+    margin-left: 20%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
 }
 .total_price_one_good{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    margin-left: 3%;
+    margin-left:20%;
 }
-@media (max-width:1872px){
+.trash{
+    width: 17px;
+
+
+
+
+}
+.trash_link{
+    margin-left: 10%;
+    align-self: center;
+    margin-right: 3%;
+}
+.total_price_and_checkout{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.total_price_all_goods{
+
+
+    margin-right: 5%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+
+
+}
+
+.next{
+
+
+    background-color: #8DC174;
+    border-radius: 3px;
+    max-width: 150px;
+    text-align: center;
+    margin: auto 3%;
+    padding-left: 4%;
+    padding-right: 4%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+
+
+}
+.next_text{
+    color: white;
+}
+@media (max-width:1919px){
+    .your_basket_is_empty{
+        font-size: 25px;
+    }
+    .one_card{
+        width: 1200px;
+    }
+
     .title_product{
         font-size: 16px;
+        width: 600px;
+
     }
     .price_one_good{
         font-size: 24px;
@@ -46,15 +128,34 @@
     .total_price_one_good{
         font-size: 24px;
     }
+    .next_text{
+        font-size:  16px;
+    }
+    .total_price_all_goods{
+        font-size: 24px;
+    }
 }
-@media (max-width:1920px){
+@media (min-width:1920px){
+    .your_basket_is_empty{
+        font-size: 25px;
+    }
+    .one_card{
+        width: 1200px;
+    }
     .title_product{
         font-size: 16px;
+        width: 600px;
     }
     .price_one_good{
         font-size: 24px;
     }
     .total_price_one_good{
+        font-size: 24px;
+    }
+    .next_text{
+        font-size:  16px;
+    }
+    .total_price_all_goods{
         font-size: 24px;
     }
 }

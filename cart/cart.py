@@ -29,12 +29,23 @@ class Cart(object):
             self.cart[product_id]['quantity'] += quantity
         self.save()
 
+    def remove(self, product):
+        """Удаление товара из корзины."""
+        product_id = str(product.id)
+        if product_id in self.cart:
+            del self.cart[product_id]
+            self.save()
+
     def save(self):
         # Обновление сессии cart
         self.session[settings.CART_SESSION_ID] = self.cart
         # Отметить сеанс как "измененный", чтобы убедиться, что он сохранен
         self.session.modified = True
 
+    def clear(self):
+        # удаление корзины из сессии
+        del self.session[settings.CART_SESSION_ID]
+        self.session.modified = True
     def __iter__(self):
         """
         Перебор элементов в корзине и получение продуктов из базы данных.

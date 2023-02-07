@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{% endblock %}
+{% block css %}<link rel="stylesheet" href="{% static 'shop/css/create.css' %}">{% endblock %}
+{% block content %}
+    <form action="." method="post" class="order-form">
+        {% csrf_token %}
+        <div class="first_step">
+            <div class="name_and_surname">
+            {{ form.first_name }}
+            {{ form.last_name }}
+            </div>
+            <div class="email_and_phone">
+            {{ form.phone }}
+            {{ form.email }}
+            </div>
+            <div  class="next"><h2 class="next_text">Далее</h2></div>
+        </div>
+        <div class="second_step" STYLE="display: none">
+            {{ form.city }}
+            {{ form.address }}
+            <input type="submit">
+        </div>
+
+    </form>
+    <script src="{% static "shop/js/form.js" %}"></script>
+{% endblock %}

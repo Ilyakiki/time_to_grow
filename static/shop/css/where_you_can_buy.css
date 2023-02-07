@@ -1,0 +1,132 @@
+.all_content{
+    display: flex;
+    flex-direction: column;
+}
+.all_text{
+    display: flex;
+    flex-direction: row;
+    margin-top: 4%;
+    justify-content: space-between;
+}
+.where_buy{
+    display: flex;
+    flex-direction: column;
+
+    max-width: 400px;
+}
+.where_buy_and_icon{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.where_buy_title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+}
+.icon{
+    max-width: 50px;
+    margin-left: 5%;
+}
+.where_buy_text{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    margin-top: 20%;
+}
+.our_adress_all{
+    margin-right: 10%;
+    max-width: 700px;
+}
+.our_adress_title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    max-width: 220px;
+    border-bottom: 3px solid #72DAE0;
+
+}
+.adress{
+    max-width: 600px;
+}
+.one_point_of_adress{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+    margin-top: 3%;
+}
+.map{
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+}
+@media (max-width:1919px){
+    .all_text{
+        width: 1300px;
+    }
+    .where_buy_title{
+        font-size: 40px;
+    }
+    .our_adress_title{
+        font-size: 40px;
+    }
+}
+
+
+@media (min-width:1920px){
+    .all_text{
+        width: 1300px;
+    }
+    .where_buy_title{
+        font-size: 40px;
+    }
+    .our_adress_title{
+        font-size: 40px;
+    }
+
+}
+@media (max-width:440px){
+    .all_content{
+        max-width: 440px;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        width: 95%;
+    }
+    .all_text{
+        max-width: 440px;
+        justify-content: space-around;
+        margin: 0 auto;
+    }
+    .where_buy{
+        max-width: 100px;
+    }
+    .where_buy_title{
+        font-size: 10px;
+    }
+    .icon{
+        max-width: 13px;
+    }
+    .map{
+        display: flex;
+        justify-content: center;
+    }
+    .map_comp{
+        max-width: 440px;
+        width: 255px;
+        height: 121px;
+    }
+    .where_buy_text{
+        font-size: 7px;
+    }
+    .our_adress_all{
+        max-width: 150px;
+    }
+    .our_adress_title{
+        font-size: 10px;
+        max-width: 60px;
+    }
+    .adress{
+        max-width: 150px;
+
+    }
+    .one_point_of_adress{
+        font-size: 7px;
+    }
+}
+

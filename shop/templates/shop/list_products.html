@@ -5,15 +5,15 @@
 {% block css %} <link rel="stylesheet" href="{% static 'shop/css/list_products.css' %}">{% endblock %}
 {% block content %}
     <div class="all_products_center">
-        <div class="title"><h1 class="title_text">Наша продукция</h1></div>
+
         <div class="all_products">
             {% for product in object_list %}
                     <div class="one_card">
-                        <a href="products/{{product.id}}">
+                        <a href="{% url 'product_detail' product.id%}">
                             <img src="{{ product.image.url }}" alt="" class="product_image" align="center">
                             <h1 class="text_name">{{ product.name }}</h1>
                         </a>
-                        <h2 class="text_price">{{ product.price }}</h2>
+                        <h2 class="text_price">{{ product.price }} &#8381;</h2>
                         <div class="add_to_cart">
                             <form action="{% url 'cart:cart_add' product_id=product.id %}" method="post" class="form">
 

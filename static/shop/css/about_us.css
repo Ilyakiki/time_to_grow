@@ -10,15 +10,37 @@
     width: 100%;
     max-width: 1460px;
     font-family: 'Inter', sans-serif;
-    font-weight: 400;
+    font-weight: 200;
 }
 .image{
     margin:0 auto;
     max-width: 1000px;
 }
-@media (max-width:1872px){
+.title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+}
+@media (max-width:1919px){
 
 }
-@media (max-width:1920px){
+@media (min-width:1920px){
 
+}
+@media (max-width:440px){
+    .all_information{
+        max-width: 440px;
+    }
+    .image{
+        max-width: 228px;
+        margin-top: 2%;
+    }
+    .text{
+        max-width: 320px;
+        font-size: 9px;
+        margin-top: 5%;
+
+    }
+    .title{
+        font-size: 14px;
+    }
 }

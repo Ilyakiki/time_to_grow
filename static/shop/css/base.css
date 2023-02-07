@@ -21,27 +21,24 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-}
-.top_left_header{
-    display: flex;
-    flex-direction: row;
-    padding-left: 10%;
-    justify-content: space-between;
     align-items: center;
+    margin-left: 3%;
 }
-.top_right_header{
-    margin-right: 4%;
+.logo_with_search_bar{
     display: flex;
-    flex-direction: row;
+    flex-direction: row ;
     align-items: center;
-    justify-content: space-between;
-
 }
 .logo{
 
     max-width: 93px;
     max-height: 91px;
 }
+.logo_header{
+    max-width: 93px;
+    max-height: 91px;
+}
+
 .search_control{
 
     font-family: 'Inter', sans-serif;
@@ -55,6 +52,8 @@
     background-repeat:no-repeat;
     border: 1px solid #655D5D;
     padding: 0 16px;
+    margin-left: 20%;
+
 
 }
 
@@ -63,7 +62,7 @@
     display: flex;
     flex-direction: column;
 
-    margin: 0 auto;
+    margin-left: 30%;
 }
 #roznichnie_prodaszi{
     font-family: 'Inter', sans-serif;
@@ -74,6 +73,7 @@
 #roznichnie_prodaszi_phone{
     font-family: 'Inter', sans-serif;
     font-weight: 700;
+    color: #4D4A4A;
     font-size: 16px;
 }
 .basket_block{
@@ -102,7 +102,11 @@
 }
 #basket_text{
     font-family: 'Inter', sans-serif;
-    font-weight: 700;
+    font-weight: 200;
+}
+#total_price{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
 }
 .navbar{
     background-color: #6478BD;
@@ -127,6 +131,10 @@
     font-weight: 400;
     border-right: 1px solid white ;
     padding-right: 16px;
+}
+.one_text_navbar:hover{
+    transition: 0.5s;
+    color: #C4CCF5;
 }
 a{
     text-decoration: none;
@@ -227,7 +235,13 @@ a{
     font-family: 'Inter', sans-serif;
     font-weight: 400;
 }
-@media (max-width:1872px){
+@media (max-width:1919px){
+    .link_homepage_mobile{
+        display: none;
+    }
+    .logo_header_mobile{
+        display: none;
+    }
     .info_in_footer{
         margin-left: 6%;
         margin-right: 6%;
@@ -251,6 +265,9 @@ a{
     .top_right_header{
         width: 600px;
     }
+    #total_price{
+        font-size: 16px;
+    }
     .all_rights_reserved{
         font-size: 10px;
     }
@@ -271,6 +288,12 @@ a{
     }
 }
 @media (min-width: 1920px){
+    .link_homepage_mobile{
+        display: none;
+    }
+    .logo_header_mobile{
+        display: none;
+    }
     .info_in_footer{
         margin-left: 10%;
         margin-right: 10%;
@@ -290,6 +313,9 @@ a{
     .top_right_header{
         width: 600px;
     }
+    #total_price{
+        font-size: 16px;
+    }
     .all_rights_reserved{
         font-size: 10px;
     }
@@ -307,5 +333,127 @@ a{
     }
     .phone_number_footer{
         font-size: 16px;
+    }
+}
+@media (max-width: 440px){
+    .top_header{
+
+        margin:0 auto;
+        padding: 0;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+    }
+
+    .phone_number{
+        display: none;
+    }
+
+    .link_homepage_mobile{
+        display: flex;
+        width: 110px;
+        justify-content: center;
+    }
+    .logo_header_mobile{
+        display: flex;
+        margin-left: 25%;
+        width: 38px;
+    }
+    .logo_header{
+        display: none;
+    }
+    .link_basket{
+        margin-right: 0;
+    }
+    .link_logo_header{
+        display: none;
+    }
+    .basket_text_class{
+        display: none;
+    }
+    .search_control{
+        max-width: 110px;
+        max-height: 20px;
+        margin: 0;
+        font-size: 9px;
+    }
+    .search_control::placeholder{
+        font-size: 8px;
+
+    }
+    .link_basket{
+        display: flex;
+        width: 110px;
+
+
+
+
+    }
+    .basket_block{
+
+    }
+    .basket{
+        max-width: 20px;
+        margin-left: 200%;
+    }
+    .sections_block{
+        display: none;
+    }
+    .text_navbar{
+        width: 85%;
+    }
+    .one_text_navbar{
+        font-size: 7px;
+        padding-right: 5px;
+    }
+    .logo{
+        display: none;
+    }
+    .logo_with_text_in_footer{
+        border-right: 1px solid white;
+        margin: 0 auto;
+    }
+    .map_pin{
+        display: none;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column-reverse;
+        padding-top: 7%;
+
+
+    }
+    .info_in_footer{
+        display: flex;
+        flex-direction: column-reverse;
+
+        margin: auto;
+
+    }
+    .phones_numbers{
+        margin-top: 10%;
+    }
+    .phone_number_footer{
+        font-size: 13px;
+    }
+    .text_prodazh_footer{
+        font-size: 13px;
+    }
+    #working_hours{
+        margin-left: 0;
+    }
+    #office_adress{
+        margin-left: 0;
+        text-align: center;
+    }
+    .all_rights_reserved{
+        text-align: center;
+
+    }
+    .geo_location{
+        margin-top: 5%;
+    }
+    *{
+        margin: 0;
     }
 }
