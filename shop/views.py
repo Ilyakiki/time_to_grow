@@ -79,10 +79,12 @@ class Search(ListView):
         none_qs = Product.objects.none()
         qs = list(chain(none_qs, my_obj_list))
 
+
         #filtered_qs = queryset.filter(name__icontains=p)
         return qs
 
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context['q'] = f'{self.request.GET.get("q")}&'
+        context['form'] = CartAddProductForm
         return context

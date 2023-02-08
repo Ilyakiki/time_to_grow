@@ -4,9 +4,15 @@
     .banner{
         width: 100%;
     }
+    .banner_image{
+        width: 100%;
+    }
 }
 @media (min-width:1920px){
     .banner{
+        width: 100%;
+    }
+    .banner_image{
         width: 100%;
     }
 }

@@ -52,6 +52,8 @@
                 {% endfor %}
             </div>
         </div>
+
+
             <div class="structure" style="display: none">
                 <h2 class="structure_title">Состав:</h2>
                 <div class="all_structure_without_table">
@@ -71,15 +73,21 @@
                     </div>
                 {% endif %}
             </div>
+
+
         <div class="method_of_application" style="display: none">
             <h2 class="method_of_application_title">Cпособ применения</h2>
             {% for method in object.method_of_application %}
                 <h2 class="one_method_of_application">{{ method }}</h2>
             {% endfor %}
         </div>
+        {% if object.declaration %}
+
+
         <div style="display: none">
             <img src="{{ object.declaration.url }}" alt="">
         </div>
+        {% endif %}
     </div>
     <script src="{% static "shop/js/products_list.js" %}"></script>
     <script src="{% static "shop/js/detail_product.js" %}"></script>

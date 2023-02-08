@@ -251,7 +251,7 @@ a{
     }
     .search_control{
         height: 40px;
-        width: 270px;
+        width: 300px;
     }
     .text_navbar{
         width: 900px;
@@ -297,6 +297,10 @@ a{
     .info_in_footer{
         margin-left: 10%;
         margin-right: 10%;
+    }
+    .search_control{
+        height: 40px;
+        width: 300px;
     }
     .office_adress_text{
         font-size: 10px;

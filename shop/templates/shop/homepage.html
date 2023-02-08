@@ -5,8 +5,9 @@
 
     <link rel="stylesheet" href="{% static 'shop/css/homepage.css' %}">{% endblock %}
 {% block content %}
-    <div class="banner">
-        <img src="{% static 'shop/img/banner_comp.jpg'%}" alt="" class="banner">
+    <picture class="banner">
+            <source media="(max-width: 440px)" srcset="{% static 'shop/img/banner_mobile.jpg' %}">
 
-    </div>
+            <img src="{% static 'shop/img/banner_comp.jpg' %}" alt="" class="banner_image" >
+        </picture>
 {% endblock %}
