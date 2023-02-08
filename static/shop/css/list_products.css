@@ -95,6 +95,7 @@
 }
 .form_quantity{
     text-align: center;
+    border: 0.2px solid #959595;
 }
 .items__control_minus{
     color: #605959;
@@ -212,5 +213,71 @@ input::-webkit-outer-spin-button,
     }
     .button{
         font-size: 10px;
+    }
+}
+@media (max-width:440px){
+    .all_products{
+        max-width: 300px;
+        justify-content: space-around;
+    }
+    .one_card{
+        width: 120px;
+        margin-top: 2%;
+    }
+    .product_image{
+        max-width: 83px;
+        align-items: center;
+        margin-left: 15%;
+
+    }
+    .text_name{
+        font-size: 7px;
+        margin-right: 10% ;
+    }
+
+    .text_price{
+        font-size: 8px;
+    }
+    .add_to_cart{
+        width: 120px;
+        justify-content: space-between;
+        margin-left: 10px;
+
+    }
+
+    .item_count_wrapper{
+        margin-top: 4%;
+    }
+    .form_quantity{
+        max-height: 10px;
+        max-width: 18px;
+        font-size: 7px;
+        padding: 5%;
+    }
+    .items__control_minus{
+        max-height: 10px;
+        max-width: 6px;
+        font-size: 6px;
+    }
+    .items__control_plus{
+        max-height: 10px;
+        max-width: 6px;
+        font-size: 6px;
+    }
+    .items__control_plus{
+        max-height: 10px;
+        max-width: 6px;
+    }
+    .button_div{
+        max-width: 60px;
+
+    }
+    .button{
+        max-width: 60px;
+        margin-left: 2px;
+    }
+    .button_text{
+        font-size: 6px;
+        margin: 4px 17px;
     }
 }
