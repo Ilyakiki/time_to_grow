@@ -23,9 +23,9 @@
 
                         {% csrf_token %}
                         <div class="item_count_wrapper">
-                            <div class="items__control_minus" data-action="minus"> - </div>
+                            <button class="items__control_minus" type="button" data-action="minus">-</button>
                             {{ form }}
-                            <div class="items__control_plus" data-action="plus"> + </div>
+                            <button class="items__control_plus" type="button" data-action="plus">+</button>
                         </div>
 
                         <div><button type="submit" class="button"><h2 class="button_text">В корзину</h2></button></div>
@@ -34,7 +34,7 @@
             </div>
         </div>
          <div class="menu">
-             <div class="menu_text" id="menu_text_left"><h2>ОПИСАНИЕ ТОВАРА</h2></div>
+             <div class="menu_text" id="menu_text_left"><h2 >ОПИСАНИЕ ТОВАРА</h2></div>
              <div class="menu_text" id="menu_text_central"><h2>СОСТАВ ТОВАРА</h2></div>
              <div class="menu_text" id="menu_text_right"><h2>СПОСОБ ПРИМЕНЕНИЯ</h2></div>
         </div>
@@ -55,7 +55,7 @@
 
 
             <div class="structure" style="display: none">
-                <h2 class="structure_title">Состав:</h2>
+                <h2 class="structure_title">Состав</h2>
                 <div class="all_structure_without_table">
 
                     {% for str in object.structure%}

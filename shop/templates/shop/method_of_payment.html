@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{% endblock %}
+
+{% block css %} <link rel="stylesheet" href="{% static 'shop/css/method_of_payment.css' %}">{% endblock %}
+{% block content %}
+    <div class="content_payment">
+        <h2 class="title">Доставка и оплата</h2>
+        <div class="method_of_payment">
+            <h3 class="method_of_payment_title">Способы оплаты:</h3>
+            <li class="one_point">Оплата платежной системой Юmoney</li>
+            <li class="one_point">Оплата при получении (Наличными курьеру)</li>
+        </div>
+        <h2 class="title" id="delivery">Доставка</h2>
+        <div class="shipping_methods">
+            <h3 class="method_of_payment_title">Способы доставки:</h3>
+            <li class="one_point">СДЭК до пункта/постомата по тарифам транспортной компании</li>
+            <li class="one_point">Курьерская доставка до двери по тарифам транспортной компании</li>
+        </div>
+        <h2 class="title" id="other_countries">Другие страны:</h2>
+        <li class="one_point">Стоимость доставки рассчитывается индивидуально в зависимости веса посылки</li>
+    </div>
+{% endblock %}

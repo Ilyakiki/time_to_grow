@@ -1,9 +1,11 @@
 {% extends "base.html" %}
-
+{% load static %}
 {% block title %}Thank you{% endblock %}
-
+{% block css %}<link rel="stylesheet" href="{% static 'shop/css/created.css'%}">{% endblock %}
 {% block content %}
-    <h1>Thank you</h1>
-    <p>Your order has been successfully completed. Your order number is
-        <strong>{{ order.id }}</strong>.</p>
+    <div class="content_created">
+        <h1 class="title">Cпасбо за заказ!</h1>
+        <br>
+        <p class="your_number">Ваш номер заказа <strong>{{ order.id }}</strong> .</p>
+        </div>
 {% endblock %}

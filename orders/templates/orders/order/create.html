@@ -3,25 +3,62 @@
 {% block title %}{% endblock %}
 {% block css %}<link rel="stylesheet" href="{% static 'shop/css/create.css' %}">{% endblock %}
 {% block content %}
-    <form action="." method="post" class="order-form">
-        {% csrf_token %}
-        <div class="first_step">
-            <div class="name_and_surname">
-            {{ form.first_name }}
-            {{ form.last_name }}
+    <div class="form_content">
+        <div class="nav_basket">
+            <div class="first_step_nav" id="first">
+                <div class="point"><h3 class="point_text">1</h3></div>
+                <h3 class="first_step_text">Состав заказа</h3>
             </div>
-            <div class="email_and_phone">
-            {{ form.phone }}
-            {{ form.email }}
+            <div class="second_step_nav" id="">
+                <div class="point"><h3 class="point_text">2</h3></div>
+                <h3 class="first_step_text">Контакты</h3>
             </div>
-            <div  class="next"><h2 class="next_text">Далее</h2></div>
+            <div class="third_step_nav" id="">
+                <div class="point"><h3 class="point_text">3</h3></div>
+                <h3 class="first_step_text">Доставка и оплата</h3>
+            </div>
         </div>
-        <div class="second_step" STYLE="display: none">
-            {{ form.city }}
-            {{ form.address }}
-            <input type="submit">
-        </div>
+        <form action="." method="post" class="order-form">
+            {% csrf_token %}
+            <div class="first_step">
+                <div class="name_and_surname">
+                {{ form.first_name }}
+                {{ form.last_name }}
+                </div>
+                <div class="email_and_phone">
+                {{ form.phone }}
+                {{ form.email }}
+                </div>
+                <button type="button" class="next"><h2 class="next_text">Далее</h2></button>
+            </div>
+            <div class="second_step" STYLE="display: none">
+                <div class="country_and_city">
+                    <h2 class="country_and_city_title">Адрес доставки</h2>
+                    <div class="country_and_city_input">
+                        {{ form.country }}
+                        {{ form.city }}
+                    </div>
+                </div>
+                <div class="delivery_method">
+                    <h2 class="delivery_method_title">Выбор способа доставки</h2>
+                    {{ form.delivery_method }}
+                    {{ form.address }}
+                </div>
+                <div class="method_of_payment_block">
+                    <h2 class="method_of_payment_title">Выбор метода оплаты</h2>
+                    {{ form.method_of_payment }}
+                </div>
+                <div class="additional_information">
+                    <h2 class="additional_information_title">Дополнительная информация</h2>
+                    {{ form.comment }}
+                    <input type="button" value="Далее" class="next_step_second">
+                    <input type="submit" value="Заказать" class="to_order" style="display: none">
 
-    </form>
+                </div>
+
+            </div>
+
+        </form>
+    </div>
     <script src="{% static "shop/js/form.js" %}"></script>
 {% endblock %}

@@ -1,5 +1,42 @@
+.form_content{
+    display: flex;
+    flex-direction: column;
+}
 .first_step{
     margin-bottom: 5%;
+}
+.nav_basket{
+    display: flex;
+    flex-direction: row;
+    border: 1px solid #EAEAEA;
+    margin-top:7%;
+
+}
+.first_step_nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-right: 1px solid #EAEAEA;
+    background-color: white;
+
+}
+.second_step_nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-right: 1px solid #EAEAEA;
+    background-color: #6478BD;
+
+}
+.third_step_nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-right: 1px solid #EAEAEA;
+
+}
+.point_text{
+    color: white;
 }
 .email_and_phone{
     margin-top: 5%;
@@ -60,6 +97,7 @@
     margin-left: 50%;
     background-color: #8DC174;
     border-radius: 3px;
+    border: 0;
     max-width: 150px;
     text-align: center;
     padding: 1%;
@@ -70,44 +108,530 @@
 .next_text{
     color: white;
 }
-
-@media (max-width:1919px){
-    .first_step{
-        width: 1000px;
-    }
-    .name{
-        font-size: 15px;
-    }
-    .surname{
-        font-size: 15px;
-    }
-    .email{
-        font-size: 15px;
-    }
-    .phone{
-        font-size: 15px;
-    }
-    .next_text{
-        font-size:  16px;
-    }
+.second_step{
+    display: flex;
+    flex-direction: column;
 }
-@media (min-width:1919px){
+.country_and_city_title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+.country_and_city{
+    display: flex;
+    flex-direction: column;
+    margin-top: 6%;
+}
+.country_and_city_input{
+    display: flex;
+    flex-direction: column;
+}
+.country{
+    border: 1px solid #EAEAEA;
+
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    padding: 2%;
+}
+.country::placeholder{
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+
+}
+.city{
+    border: 1px solid #EAEAEA;
+    margin-top:2%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    padding: 2%;
+}
+.city::placeholder{
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+
+}
+.delivery_method{
+    display: flex;
+    flex-direction: column;
+    margin-top: 6%;
+}
+.delivery_method_title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+.method_of_delivery{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 1%;
+}
+
+.adress{
+    border: 1px solid #EAEAEA;
+    margin-top:2%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    padding: 2%;
+}
+.adress::placeholder{
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+}
+.method_of_payment_title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+.method_of_payment{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 1%;
+}
+.additional_information{
+    display: flex;
+    flex-direction: column;
+}
+.additional_information_title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+}
+.comment{
+    border: 1px solid #EAEAEA;
+    margin-top:2%;
+    padding: 2%;
+}
+.comment::placeholder{
+    font-family: 'Inter', sans-serif;
+        font-weight: 400;
+}
+.next_step_second{
+    margin-top: 5%;
+    margin-left: 50%;
+    background-color: #8DC174;
+    border-radius: 3px;
+    border: 0;
+    max-width: 150px;
+    text-align: center;
+    padding: 2%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: white;
+
+}
+.to_order{
+    margin-top: 5%;
+    margin-left: 50%;
+    background-color: #8DC174;
+    border-radius: 3px;
+    border: 0;
+    max-width: 150px;
+    text-align: center;
+    padding: 2%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    color: white;
+}
+@media (max-width:1919px){
+    .nav_basket{
+        width: 1100px;
+        height: 40px;
+    }
+    .first_step_nav{
+        width: 433px;
+
+    }
+    .second_step_nav{
+        width: 433px;
+
+    }
+    .third_step_nav{
+        width: 433px;
+
+    }
+    .point{
+        margin: auto 5px;
+        background-color: #72DAE0;
+        border-radius: 50%;
+        height: 21px;
+        width: 21px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .point_text{
+        margin: auto auto;
+        font-family: 'Inter', sans-serif;
+        font-weight: 200;
+    }
+    .first_step_text{
+        margin-left: 60px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+
+    }
     .first_step{
         width: 1000px;
     }
     .name{
-        font-size: 15px;
+        font-size: 20px;
     }
     .surname{
-        font-size: 15px;
+        font-size: 20px;
     }
     .email{
-        font-size: 15px;
+        font-size: 20px;
     }
     .phone{
-        font-size: 15px;
+        font-size: 20px;
+    }
+    .next{
+        width: 150px;
     }
     .next_text{
         font-size:  16px;
+
     }
+    .country_and_city_title{
+        font-size: 24px;
+    }
+    .country_and_city_input{
+        margin-top: 2%;
+        max-width: 800px;
+    }
+    .country{
+        height: 50px;
+        width: 800px;
+        font-size: 20px;
+    }
+    .country::placeholder{
+        font-size: 17px;
+    }
+    .city{
+        height: 50px;
+        width: 800px;
+        font-size: 20px;
+    }
+    .city::placeholder{
+        font-size: 17px;
+    }
+    .delivery_method_title{
+        font-size: 24px;
+    }
+    .method_of_delivery{
+        font-size: 20px;
+    }
+    .adress{
+        height: 50px;
+        width: 800px;
+        font-size: 20px;
+    }
+    .adress::placeholder{
+        font-size: 17px;
+    }
+    .method_of_payment_title{
+        font-size: 24px;
+        margin-top: 4%;
+    }
+    .method_of_payment{
+        font-size: 20px;
+    }
+    .additional_information{
+        width: 500px;
+    }
+    .additional_information_title{
+        font-size: 24px;
+        margin-top: 4%;
+    }
+    .comment{
+        height: 120px;
+        width: 500px;
+        font-size: 20px;
+    }
+    .city::placeholder{
+        font-size: 17px;
+    }
+    .next_step_second{
+        width: 150px;
+        font-size: 16px;
+        margin: 3% 120%;
+
+    }
+    .to_order{
+        width: 150px;
+        font-size: 16px;
+        margin: 3% 120%;
+    }
+
+}
+@media (min-width:1920px){
+    .nav_basket{
+        width: 1100px;
+        height: 40px;
+    }
+    .first_step_nav{
+        width: 433px;
+
+    }
+    .second_step_nav{
+        width: 433px;
+
+    }
+    .third_step_nav{
+        width: 433px;
+
+    }
+    .point{
+        margin: auto 5px;
+        background-color: #72DAE0;
+        border-radius: 50%;
+        height: 21px;
+        width: 21px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+    .point_text{
+        margin: auto auto;
+        font-family: 'Inter', sans-serif;
+        font-weight: 200;
+    }
+    .first_step_text{
+        margin-left: 60px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+
+    }
+    .first_step{
+        width: 1000px;
+    }
+    .name{
+        font-size: 20px;
+    }
+    .surname{
+        font-size: 20px;
+    }
+    .email{
+        font-size: 20px;
+    }
+    .phone{
+        font-size: 20px;
+    }
+    .next{
+        width: 150px;
+    }
+    .next_text{
+        font-size:  16px;
+
+    }
+    .country_and_city_title{
+        font-size: 24px;
+    }
+    .country_and_city_input{
+        margin-top: 2%;
+        max-width: 800px;
+        font-size: 20px;
+    }
+    .country{
+        height: 50px;
+        width: 800px;
+        font-size: 20px;
+    }
+    .country::placeholder{
+        font-size: 17px;
+    }
+    .city{
+        height: 50px;
+        width: 800px;
+        font-size: 20px;
+    }
+    .city::placeholder{
+        font-size: 17px;
+    }
+    .delivery_method_title{
+        font-size: 24px;
+    }
+    .method_of_delivery{
+        font-size: 20px;
+    }
+    .adress{
+        height: 50px;
+        width: 800px;
+        font-size: 20px;
+    }
+    .adress::placeholder{
+        font-size: 17px;
+    }
+    .method_of_payment_title{
+        font-size: 24px;
+        margin-top: 4%;
+    }
+    .method_of_payment{
+        font-size: 20px;
+    }
+    .additional_information_title{
+        font-size: 24px;
+        margin-top: 4%;
+    }
+    .comment{
+        height: 120px;
+        width: 500px;
+        font-size: 20px;
+    }
+    .city::placeholder{
+        font-size: 17px;
+    }
+    .next_step_second{
+        width: 150px;
+        font-size: 16px;
+        margin: 3% 120%;
+
+    }
+    .to_order{
+        width: 150px;
+        font-size: 16px;
+        margin: 3% 120%;
+    }
+
+}
+@media (max-width:440px){
+    .nav_basket{
+        width: 330px;
+        height: 20px;
+    }
+    .point{
+        margin: auto 5px;
+        background-color: #72DAE0;
+        border-radius: 50%;
+        height: 10px;
+        width: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .first_step_nav{
+        width: 110px;
+
+    }
+    .second_step_nav{
+        width: 110px;
+
+    }
+    .third_step_nav{
+        width: 110px;
+    }
+    .point_text{
+        margin: auto auto;
+        font-family: 'Inter', sans-serif;
+        font-weight: 200;
+        font-size: 7px;
+    }
+    .first_step_text{
+        margin-left: 10px;
+        font-family: 'Inter', sans-serif;
+        font-weight: 400;
+        font-size: 8px;
+
+    }
+    .first_step{
+        max-width: 330px;
+    }
+    .name_and_surname{
+        flex-direction: column;
+    }
+    .email_and_phone{
+        flex-direction: column;
+    }
+    .name{
+        font-size: 11px;
+    }
+    .phone{
+        font-size: 11px;
+    }
+    .surname{
+        font-size: 11px;
+        margin: 0;
+        margin-top: 5%;
+    }
+    .email{
+        font-size: 11px;
+        margin: 0;
+        margin-top: 5%;
+    }
+    .country_and_city_title{
+        font-size: 13px;
+        max-width: 200px;
+
+    }
+    .country{
+        height: 22px;
+        width: 250px;
+        font-size: 11px;
+    }
+    .country::placeholder{
+        font-size: 11px;
+    }
+    .city{
+        height: 22px;
+        width: 250px;
+        font-size: 11px;
+    }
+
+    .city::placeholder{
+        font-size: 11px;
+    }
+    .delivery_method_title{
+        font-size: 13px;
+        max-width: 200px;
+        margin-top: 3%;
+    }
+    .method_of_delivery{
+        font-size: 11px;
+        margin-top: 3%;
+    }
+    .adress{
+        height: 22px;
+        width: 250px;
+        font-size: 11px;
+        margin-top: 3%;
+    }
+    .adress::placeholder{
+        font-size: 11px;
+    }
+    .method_of_payment_title{
+        font-size: 13px;
+        max-width: 200px;
+        margin-top: 7%;
+    }
+    .method_of_payment{
+        font-size: 11px;
+        margin-top: 2%;
+    }
+    .additional_information{
+        width: 200px;
+    }
+    .additional_information_title{
+        font-size: 13px;
+        max-width: 200px;
+        margin-top: 4%;
+    }
+    .comment{
+        height: 50px;
+        width: 180px;
+        font-size: 11px;
+    }
+    .comment::placeholder{
+        font-size: 11px;
+    }
+    .next_step_second{
+        max-width: 150px;
+        font-size: 16px;
+        margin: 10% 80%;
+
+
+    }
+    .to_order{
+        max-width: 150px;
+        font-size: 16px;
+        margin: 10% 80%;
+    }
+
 }

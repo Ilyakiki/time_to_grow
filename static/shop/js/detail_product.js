@@ -5,10 +5,10 @@ const application=document.getElementById('menu_text_right')
 const description_content=document.getElementsByClassName('description')[0]
 const structure_content=document.getElementsByClassName('structure')[0]
 const application_content=document.getElementsByClassName('method_of_application')[0]
-console.log(description_content.style)
+
 
 description.addEventListener('click',function (){
-    console.log('hi')
+
     description.style.color='#409393'
     structure.style.color='#58CBCB'
     application.style.color='#58CBCB'
@@ -19,7 +19,7 @@ description.addEventListener('click',function (){
 })
 
 structure.addEventListener('click',function (){
-    console.log('hi')
+
     description.style.color='#58CBCB'
     structure.style.color='#409393'
     application.style.color='#58CBCB'
@@ -29,7 +29,7 @@ structure.addEventListener('click',function (){
 })
 
 application.addEventListener('click',function (){
-    console.log('hi')
+
     description.style.color='#58CBCB'
     structure.style.color='#58CBCB'
     application.style.color='#409393'

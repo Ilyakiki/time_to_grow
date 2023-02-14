@@ -3,15 +3,30 @@ from shop.models import Product
 from phonenumber_field.modelfields import PhoneNumberField
 
 class Order(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
-    email = models.EmailField()
+
+    first_name = models.CharField(max_length=50,blank=False)
+    last_name = models.CharField(max_length=50,blank=False)
+    email = models.EmailField(blank=False)
     phone=PhoneNumberField('RU',null=False,blank=False)
-    city = models.CharField(max_length=100)
-    address = models.CharField(max_length=250)
+    country=models.CharField(max_length=100,default=None,blank=False)
+    city = models.CharField(max_length=100,blank=False)
+    address = models.CharField(max_length=250,blank=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+    CHOISES_OF_METHOD_DELIVERY=(
+        ('0','До пункта самовывоза СДЭК'),
+    )
+    delivery_method=models.CharField(blank=False,max_length=31,default=None,choices=CHOISES_OF_METHOD_DELIVERY)
+
+    TYPE_SELECT = (
+        ('0', 'Оплата Картой Онлайн'),
+        ('1', 'Оплата при получении'),
+    )
+
+    method_of_payment=models.CharField(blank=False,max_length=31,default=None,choices=TYPE_SELECT)
     paid = models.BooleanField(default=False)
+    comment=models.TextField(default=None,blank=True)
+
 
     class Meta:
         ordering = ('-created',)

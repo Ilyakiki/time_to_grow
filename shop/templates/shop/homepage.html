@@ -5,9 +5,26 @@
 
     <link rel="stylesheet" href="{% static 'shop/css/homepage.css' %}">{% endblock %}
 {% block content %}
-    <picture class="banner">
-            <source media="(max-width: 440px)" srcset="{% static 'shop/img/banner_mobile.jpg' %}">
+    <div class="content_homepage">
+        <picture class="banner">
+                <source media="(max-width: 440px)" srcset="{% static 'shop/img/banner_mobile.jpg' %}">
 
-            <img src="{% static 'shop/img/banner_comp.jpg' %}" alt="" class="banner_image" >
+                <img src="{% static 'shop/img/banner_comp.jpg' %}" alt="" class="banner_image" >
         </picture>
+        <img src="{% static 'shop/img/homepage_2.svg' %}" alt="" class="homepage_image_2">
+        <div class="gray_backgroung">
+            <div class="left_coloumn">
+                <img src="{% static 'shop/img/grow_img 1.png' %}" alt="" class="image">
+            </div>
+            <div class="right_coloumn">
+                <h2 class="title">Time To Grow</h2>
+                <h3 class="text">Программа Time To Grow является уникальной в своем роде, так как представляет не набор аппаратов и средств профессиональной косметики для волос, а комплексную систему трихологической диагностики и лечения. Проводится обучение, предоставляются учебные видеоролики, статьи, проводится поддержка врачей, обучившихся и работающих по программе Time To Grow. Программа востребована как в медицинских клиниках, так и в салонах красоты, имеющих медицинскую лицензию, а также у частнопрактикующих врачей.</h3>
+                <div class="social_networks">
+                    <h2 class="social_networks_text">МЫ В СОЦ. СЕТЯХ</h2>
+                    <a href="https://instagram.com/time_to_grow_spb?igshid=YWJhMjlhZTc=" class="instagram_homepage_logo_link" ><img src="{% static 'shop/img/instagram_homepage.svg' %}" alt="" class="instagram_homepage_logo"></a>
+                    <a href="https://vk.com/timetogrowspb" class="vk_homepage_logo_link"><img src="{% static 'shop/img/vk_homepage.svg' %}" alt="" class="vk_homepage_logo"></a>
+                </div>
+            </div>
+        </div>
+    </div>
 {% endblock %}

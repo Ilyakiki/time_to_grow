@@ -1,6 +1,6 @@
 
 window.addEventListener('click',function (event){
-    console.log(event.target)
+
 
     if (event.target.dataset.action === 'plus'){
         const CountWrapper = event.target.closest('.item_count_wrapper')

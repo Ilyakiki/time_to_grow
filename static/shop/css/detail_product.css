@@ -65,12 +65,16 @@ form{
 
     border-top:1px solid #959595 ;
     border-bottom:1px solid #959595 ;
+    background-color: white;
+    appearance: none;
+    border-left:0 ;
 
 
 
 }
 .form_quantity{
     text-align: center;
+    border: 0.2px solid #959595;
 }
 .items__control_minus{
     color: #605959;
@@ -80,6 +84,9 @@ form{
     border-left:1px solid #959595 ;
     border-top:1px solid #959595 ;
     border-bottom:1px solid #959595 ;
+    background-color: white;
+    appearance: none;
+    border-right:0 ;
 
 }
 .input_number{
@@ -335,5 +342,128 @@ input::-webkit-outer-spin-button,
     }
     .one_method_of_application{
         font-size: 24px;
+    }
+}
+@media (max-width:440px){
+    .photo_block{
+        max-width: 180px;
+        margin: 0 auto;
+    }
+    .photo{
+        max-width: 180px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .product_with_price{
+        flex-direction: column;
+    }
+    .short_description{
+        display: none;
+    }
+    .product_text{
+
+        max-width: 280px;
+        margin: 6% auto;
+    }
+    .product_title{
+        font-size: 13px;
+        text-align: center;
+    }
+    .price{
+        font-size: 14px;
+    }
+    .add_to_cart{
+        max-width: 229px;
+
+    }
+    .item_count_wrapper{
+        max-width: 75px;
+        max-height: 25px;
+    }
+    .items__control_minus{
+        max-height: 25px;
+        max-width: 24px;
+        font-size: 14px;
+        padding: 5%;
+    }
+    .items__control_plus{
+        max-height: 25px;
+        max-width: 24px;
+        font-size: 14px;
+        padding: 5%;
+    }
+    .button{
+        max-width: 130px;
+        padding: 0;
+        margin-left: 70%;
+        margin-top: 3%;
+    }
+    .button_text{
+        font-size: 10px;
+        margin: 7px 36px;
+
+    }
+    .menu{
+        max-width: 320px;
+    }
+    #menu_text_left{
+        font-weight: 200;
+        text-align: center;
+        font-size: 9px;
+        max-width: 120px;
+    }
+    #menu_text_central{
+        font-weight: 200;
+        text-align: center;
+        font-size: 9px;
+        max-width: 120px;
+    }
+    #menu_text_right{
+        font-weight: 200;
+        text-align: center;
+        font-size: 9px;
+        max-width: 120px;
+    }
+    .description{
+        max-width: 320px;
+    }
+    .description_title{
+        font-size: 11px;
+    }
+    .point{
+        font-size: 11px;
+    }
+    .all_description_text{
+        max-width: 320px;
+    }
+    .description_text{
+        font-size: 11px;
+    }
+    .structure{
+        max-width: 320px;
+    }
+    .structure_title{
+        font-size: 11px;
+    }
+    .all_structure_without_table{
+        max-width: 320px;
+    }
+    .one_structure_text{
+        font-size: 11px;
+    }
+    .table{
+        max-width: 320px;
+    }
+    .one_point_of_table{
+        font-size: 11px;
+    }
+    .method_of_application{
+        max-width: 320px;
+    }
+    .method_of_application_title{
+        font-size: 11px;
+    }
+    .one_method_of_application{
+        font-size: 11px;
     }
 }

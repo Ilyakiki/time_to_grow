@@ -5,7 +5,20 @@
 {% block content %}
     <div class="all_products">
         {% if cart %}
-
+        <div class="nav_basket">
+            <div class="first_step" id="first">
+                <div class="point"><h3 class="point_text">1</h3></div>
+                <h3 class="first_step_text">Состав заказа</h3>
+            </div>
+            <div class="second_step" id="">
+                <div class="point"><h3 class="point_text">2</h3></div>
+                <h3 class="first_step_text">Контакты</h3>
+            </div>
+            <div class="third_step" id="">
+                <div class="point"><h3 class="point_text">3</h3></div>
+                <h3 class="first_step_text">Доставка и оплата</h3>
+            </div>
+        </div>
         {% for item in cart %}
             {% with product=item.product %}
             <div class="one_card">

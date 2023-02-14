@@ -19,9 +19,9 @@
 
                                 {% csrf_token %}
                                 <div class="item_count_wrapper">
-                                    <div class="items__control_minus" data-action="minus">-</div>
+                                    <button class="items__control_minus" type="button" data-action="minus">-</button>
                                     {{ form }}
-                                    <div class="items__control_plus" data-action="plus">+</div>
+                                    <button class="items__control_plus" type="button" data-action="plus">+</button>
                         </div>
 
                         <div class="button_div"><button type="submit" class="button"><h2 class="button_text">В корзину</h2></button></div>

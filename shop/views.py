@@ -18,6 +18,8 @@ def about_us(request):
     return render(request,'shop/about_us.html')
 def FAQ(request):
     return render(request,'shop/FAQ.html')
+def method_of_payment(requets):
+    return render(requets,'shop/method_of_payment.html')
 class ListProducts(ListView):
     '''Список Товаров'''
     paginate_by = 10  # Пагинация

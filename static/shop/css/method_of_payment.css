@@ -1,0 +1,112 @@
+.content_payment{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+.method_of_payment{
+    display: flex;
+    flex-direction: column;
+}
+.shipping_methods{
+    display: flex;
+    flex-direction: column;
+}
+.title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+}
+.method_of_payment_title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+.one_point{
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+}
+.one_point::marker{
+    color :#58CBCB;
+}
+@media (max-width:1919px){
+    .title{
+        font-size: 40px;
+        margin-bottom: 5%;
+    }
+    .method_of_payment{
+
+    }
+    .method_of_payment_title{
+        font-size: 24px;
+    }
+    #delivery{
+        margin-bottom: 1%;
+        margin-top: 5%;
+    }
+    .one_point{
+        font-size: 24px;
+    }
+    .one_point{
+        font-size: 24px;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+    .shipping_methods{
+        margin-top: 2%;
+    }
+    #other_countries{
+        margin-bottom: 1%;
+        margin-top: 5%;
+    }
+}
+@media (min-width:1920px){
+    .title{
+        font-size: 40px;
+    }
+    .method_of_payment{
+
+    }
+    .method_of_payment_title{
+        font-size: 24px;
+    }
+    #delivery{
+        margin-bottom: 1%;
+        margin-top: 5%;
+    }
+    .one_point{
+        font-size: 24px;
+    }
+    .one_point{
+        font-size: 24px;
+        margin-top: 2%;
+        margin-bottom: 1%;
+    }
+    .shipping_methods{
+        margin-top: 2%;
+    }
+    #other_countries{
+        margin-bottom: 1%;
+        margin-top: 5%;
+    }
+}
+@media (max-width:440px){
+    .content_payment{
+        max-width: 320px;
+
+    }
+    .method_of_payment{
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+    .title{
+        font-size: 15px;
+        margin-top: 5%;
+        margin-bottom: 5%;
+    }
+    .method_of_payment_title{
+        font-size: 12px;
+    }
+    .one_point{
+        font-size: 12px;
+        margin-top: 2%;
+    }
+}
