@@ -24,6 +24,7 @@ class Order(models.Model):
     )
 
     method_of_payment=models.CharField(blank=False,max_length=31,default=None,choices=TYPE_SELECT)
+    id_of_PVZ=models.CharField(blank=True,default=None,max_length=15,null=True)
     paid = models.BooleanField(default=False)
     comment=models.TextField(default=None,blank=True)
 

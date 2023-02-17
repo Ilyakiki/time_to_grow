@@ -73,3 +73,7 @@ class Cart(object):
         """
         return sum(int(item['price']) * item['quantity'] for item in
                    self.cart.values())
+
+    def get_total_weight(self):
+        """Подсчет общей массы в граммах"""
+        return sum(item['product'].weight*item['quantity'] for item in self.cart.values())

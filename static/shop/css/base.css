@@ -53,10 +53,12 @@
     border: 1px solid #655D5D;
     padding: 0 16px;
     margin-left: 20%;
+    background-color: white;
 
 
 }
 
+.search_control::-webkit-search-cancel-button { -webkit-appearance: none; }
 
 .phone_number{
     display: flex;
@@ -381,6 +383,7 @@ a{
         max-height: 20px;
         margin: 0;
         font-size: 9px;
+
     }
     .search_control::placeholder{
         font-size: 8px;

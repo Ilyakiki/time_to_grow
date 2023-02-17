@@ -1,7 +1,28 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block title %}{% endblock %}
-{% block css %}<link rel="stylesheet" href="{% static 'shop/css/create.css' %}">{% endblock %}
+{% block css %}<link rel="stylesheet" href="{% static 'shop/css/create.css' %}"><script id="ISDEKscript" type="text/javascript" src="{% static 'shop/js/widjet.js' %}" charset="utf-8"></script>
+<script type="text/javascript">
+    var ourWidjet = new ISDEKWidjet ({
+        defaultCity: 'Санкт-Петербург', //какой город отображается по умолчанию
+        cityFrom: 'Санкт-Петербург', // из какого города будет идти доставка
+        country: 'Россия', // можно выбрать страну, для которой отображать список ПВЗ
+        link: 'forpvz', // id элемента страницы, в который будет вписан виджет
+        path: 'https://widget.cdek.ru/widget/scripts/',//директория с библиотекам
+        // ссылка на файл service.php на вашем сайте
+    });
+    ourWidjet.binders.add(choosePVZ, 'onChoose');
+    function choosePVZ(wat) {
+            const adress=document.getElementsByClassName('adress')[0]
+            const id_of_pvz=document.getElementsByClassName('id_of_PVZ')[0]
+            adress.value=wat.PVZ.Address
+            id_of_pvz.value=wat.id
+
+        }
+
+</script>
+{% endblock %}
+
 {% block content %}
     <div class="form_content">
         <div class="nav_basket">
@@ -42,7 +63,11 @@
                 <div class="delivery_method">
                     <h2 class="delivery_method_title">Выбор способа доставки</h2>
                     {{ form.delivery_method }}
+                    <div id="forpvz" style="display: none"></div>
+                    <div id="service_message"></div>
                     {{ form.address }}
+                    {{ form.id_of_PVZ }}
+
                 </div>
                 <div class="method_of_payment_block">
                     <h2 class="method_of_payment_title">Выбор метода оплаты</h2>
@@ -59,6 +84,7 @@
             </div>
 
         </form>
+
     </div>
     <script src="{% static "shop/js/form.js" %}"></script>
 {% endblock %}

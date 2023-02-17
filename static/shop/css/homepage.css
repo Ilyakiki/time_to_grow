@@ -37,7 +37,7 @@
         width: 100%;
     }
     .banner_image{
-        width: 100%;
+        width: 95%;
     }
     .homepage_image_2{
         width: 90%;
@@ -92,7 +92,7 @@
         width: 100%;
     }
     .banner_image{
-        width: 100%;
+        width: 95%;
     }
     .homepage_image_2{
         width: 90%;
@@ -144,6 +144,9 @@
 @media (max-width:440px){
 
     .banner{
+        width: 100%;
+    }
+    .banner_image{
         width: 100%;
     }
     .homepage_image_2{

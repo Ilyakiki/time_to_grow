@@ -1,3 +1,5 @@
 pip install Pillow
 pip install transliterate
 pip install django-phonenumber-field
+
+pip install requests

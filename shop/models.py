@@ -19,7 +19,7 @@ class DescriptionPoint(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=200, db_index=True)
     slug = models.SlugField(max_length=200, db_index=True,null=False,default='')
-    image = models.ImageField(upload_to='products/', blank=True)
+    image = models.ImageField(upload_to='products/', blank=False)
     short_description=models.CharField(max_length=300,blank=True)
     description_text = models.TextField(blank=True)
     description_points=models.ManyToManyField(DescriptionPoint,blank=True)
@@ -31,6 +31,7 @@ class Product(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     available = models.BooleanField(default=True)
+    weight= models.PositiveIntegerField(default=0,blank=False)
 
     class Meta:
         ordering = ('name',)

@@ -9,7 +9,7 @@ class OrderCreateForm(forms.ModelForm):
     class Meta:
         model = Order
 
-        fields = ['first_name', 'last_name', 'email','country','city','delivery_method','method_of_payment', 'address','phone','comment',]
+        fields = ['first_name', 'last_name', 'email','country','city','delivery_method','method_of_payment', 'address','phone','comment','id_of_PVZ']
         widgets = {
             'first_name': forms.TextInput(attrs={'placeholder': 'Имя',
                                                  'class':'name'} ),
@@ -35,7 +35,8 @@ class OrderCreateForm(forms.ModelForm):
                                                          'class':'method_of_payment'}),
 
             'comment':forms.Textarea(attrs={'placeholder': 'Комментарий',
-                                              'class':'comment'})
+                                              'class':'comment'}),
+            'id_of_PVZ':forms.TextInput(attrs={'class':'id_of_PVZ'})
         }
 
 

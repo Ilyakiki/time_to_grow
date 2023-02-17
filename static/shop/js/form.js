@@ -8,6 +8,13 @@ const third_step_nav=document.getElementsByClassName('third_step_nav')[0]
 const to_order=document.getElementsByClassName('to_order')[0]
 
 
+sdek_map=document.getElementById('forpvz')
+const method_of_delivery=document.getElementById('id_delivery_method_0')
+
+method_of_delivery.addEventListener('click',function (){
+    sdek_map.style.display=''
+})
+
 next_step.addEventListener('click',function (){
     second_step_nav.style.backgroundColor='white'
     third_step_nav.style.backgroundColor='#6478BD'
