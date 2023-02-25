@@ -9,12 +9,15 @@
         country: 'Россия', // можно выбрать страну, для которой отображать список ПВЗ
         link: 'forpvz', // id элемента страницы, в который будет вписан виджет
         path: 'https://widget.cdek.ru/widget/scripts/',//директория с библиотекам
-        // ссылка на файл service.php на вашем сайте
+        mode: 'pvz',
+            // ссылка на файл service.php на вашем сайте
     });
     ourWidjet.binders.add(choosePVZ, 'onChoose');
     function choosePVZ(wat) {
             const adress=document.getElementsByClassName('adress')[0]
             const id_of_pvz=document.getElementsByClassName('id_of_PVZ')[0]
+            console.log(wat)
+            wat.display='none'
             adress.value=wat.PVZ.Address
             id_of_pvz.value=wat.id
 
@@ -45,6 +48,7 @@
                 <div class="name_and_surname">
                 {{ form.first_name }}
                 {{ form.last_name }}
+                {{ form.third_name }}
                 </div>
                 <div class="email_and_phone">
                 {{ form.phone }}
@@ -56,15 +60,15 @@
                 <div class="country_and_city">
                     <h2 class="country_and_city_title">Адрес доставки</h2>
                     <div class="country_and_city_input">
-                        {{ form.country }}
+
                         {{ form.city }}
                     </div>
                 </div>
                 <div class="delivery_method">
                     <h2 class="delivery_method_title">Выбор способа доставки</h2>
                     {{ form.delivery_method }}
-                    <div id="forpvz" style="display: none"></div>
-                    <div id="service_message"></div>
+                        <div id="forpvz" style="display: none"></div>
+                        <div id="service_message"></div>
                     {{ form.address }}
                     {{ form.id_of_PVZ }}
 

@@ -9,7 +9,7 @@
         <div class="all_products">
             {% for product in object_list %}
                     <div class="one_card">
-                        <a href="{% url 'product_detail' product.id%}" class="product_link">
+                        <a href="{% url 'shop:product_detail' product.id%}" class="product_link">
                             <img src="{{ product.image.url }}" alt="" class="product_image" align="center">
                             <h1 class="text_name">{{ product.name }}</h1>
                         </a>

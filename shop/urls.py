@@ -12,3 +12,4 @@ urlpatterns = [
     path('FAQ/',FAQ,name='FAQ'),
     path('products/<int:pk>',DetailProduct.as_view(),name='product_detail'),
 ]
+app_name='shop'

@@ -3,6 +3,7 @@
     padding: 0;
 
 }
+
 .body{
     font-family: 'Inter', sans-serif;
 
@@ -43,28 +44,40 @@
 
     font-family: 'Inter', sans-serif;
     -webkit-appearance: none;
+  	-webkit-border-radius:0;
+  	background-image: url("/static/shop/img/lupa.svg");
     width: 334px;
     height: 58px;
-    background-image: url("/static/shop/img/lupa.svg");
+    background-color:white;
     background-position-y: 50% ;
     background-position-x: 95%;
     background-size: 8% ;
     background-repeat:no-repeat;
     border: 1px solid #655D5D;
     padding: 0 16px;
-    margin-left: 20%;
-    background-color: white;
-
+	
 
 }
-
+.search_control:focus{
+    outline: #ffffff;
+}
 .search_control::-webkit-search-cancel-button { -webkit-appearance: none; }
+
+.search_and_official_store{
+    display: flex;
+    flex-direction: column;
+}
+#official_store{
+    font-family: 'Inter', sans-serif;
+    font-weight: 200;
+
+}
 
 .phone_number{
     display: flex;
     flex-direction: column;
 
-    margin-left: 30%;
+    margin-left: 10%;
 }
 #roznichnie_prodaszi{
     font-family: 'Inter', sans-serif;
@@ -256,6 +269,9 @@ a{
         height: 40px;
         width: 300px;
     }
+    #official_store{
+        font-size: 15px;
+    }
     .text_navbar{
         width: 900px;
     }
@@ -275,14 +291,15 @@ a{
         font-size: 10px;
     }
     #office_adress{
-        font-size: 10px;
+        font-size: 12px;
     }
     #working_hours{
-        font-size: 10px;
+        font-size: 12px;
     }
     .section{
         font-size: 15px;
     }
+  
     .text_prodazh_footer{
         font-size: 16px;
     }
@@ -304,6 +321,9 @@ a{
     .search_control{
         height: 40px;
         width: 300px;
+    }
+    #official_store{
+        font-size: 15px;
     }
     .office_adress_text{
         font-size: 10px;
@@ -327,10 +347,10 @@ a{
         font-size: 10px;
     }
     #office_adress{
-        font-size: 10px;
+        font-size: 12px;
     }
     #working_hours{
-        font-size: 10px;
+        font-size: 12px;
     }
     .section{
         font-size: 15px;
@@ -351,11 +371,12 @@ a{
         align-items: center;
         width: 90%;
     }
-
     .phone_number{
         display: none;
     }
-
+    #official_store{
+        display: none;
+    }
     .link_homepage_mobile{
         display: flex;
         width: 110px;
@@ -383,10 +404,10 @@ a{
         max-height: 20px;
         margin: 0;
         font-size: 9px;
-
+      	border-radius: 0;
     }
     .search_control::placeholder{
-        font-size: 8px;
+        font-size: 9px;
 
     }
     .link_basket{

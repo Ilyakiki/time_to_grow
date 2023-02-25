@@ -3,18 +3,20 @@ from shop.models import Product
 from phonenumber_field.modelfields import PhoneNumberField
 
 class Order(models.Model):
-
     first_name = models.CharField(max_length=50,blank=False)
     last_name = models.CharField(max_length=50,blank=False)
+    third_name = models.CharField(max_length=50,blank=True,default='')
     email = models.EmailField(blank=False)
     phone=PhoneNumberField('RU',null=False,blank=False)
-    country=models.CharField(max_length=100,default=None,blank=False)
+    sended_to_sdek=models.BooleanField(default=False)
+    payment_id=models.CharField(max_length=63,default=None,null=True,blank=True)
     city = models.CharField(max_length=100,blank=False)
     address = models.CharField(max_length=250,blank=False)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
     CHOISES_OF_METHOD_DELIVERY=(
         ('0','До пункта самовывоза СДЭК'),
+        ('1','Курьером СДЭК')
     )
     delivery_method=models.CharField(blank=False,max_length=31,default=None,choices=CHOISES_OF_METHOD_DELIVERY)
 

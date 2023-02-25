@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;700&family=Kadwa&family=Kelly+Slab&display=swap" rel="stylesheet">
+  	<link rel="shortcut icon" type="image/png" href="{% static 'favicon.ico' %}"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="{% static 'shop/css/base.css'%}">
     {% block css %}{% endblock %}
@@ -16,19 +17,22 @@
     <header class="header">
         <div class="top_header">
 
-                <a href="{% url 'homepage' %}" class="link_logo_header"><img src="{% static 'shop/img/Time_to_grow_logo.jpg' %}" alt="" class="logo_header"></a>
-                <form action="{% url 'search' %}" method="get" class="form">
-                    <input type="search" placeholder="Поиск Товаров" name="q" class="search_control" required="">
-                    <button type="submit" class="btn1" STYLE="display: none">
-                        <span class="search" aria-hidden="true" ></span>
-                    </button>
-                </form>
-                <a href="{% url 'homepage' %}" class="link_homepage_mobile"><img src="{% static 'shop/img/Time_to_grow_logo.jpg' %}" alt="" class="logo_header_mobile" ></a>
-                <div class="phone_number">
-
-                    <h3 id="roznichnie_prodaszi_phone">+7 (981) 012-80-69</h3>
-                    <h3 id="roznichnie_prodaszi">Розничные продажи:</h3>
+                <a href="{% url 'shop:homepage' %}" class="link_logo_header"><img src="{% static 'shop/img/Time_to_grow_logo.jpg' %}" alt="" class="logo_header"></a>
+                <div class="search_and_official_store">
+                    <h3 id="official_store">Официальный дистрибьютор в СПБ и ЛО</h3>
+                    <form action="{% url 'shop:search' %}" method="get" class="form">
+                        <input type="search" placeholder="Поиск Товаров" name="q" class="search_control" required="">
+                        <button type="submit" class="btn1" STYLE="display: none">
+                            <span class="search" aria-hidden="true" ></span>
+                        </button>
+                    </form>
                 </div>
+                <a href="{% url 'shop:homepage' %}" class="link_homepage_mobile"><img src="{% static 'shop/img/Time_to_grow_logo.jpg' %}" alt="" class="logo_header_mobile" ></a>
+                <div class="phone_number">
+                    <h3 id="roznichnie_prodaszi_phone">+7 (981) 012-80-69</h3>
+                    <h3 id="roznichnie_prodaszi">Оптовые и Розничные продажи:</h3>
+                </div>
+
                 <a href="{% url 'cart:cart_detail' %}" class="link_basket">
 
                     <div class="basket_block">
@@ -45,11 +49,11 @@
 
         <nav class="navbar">
             <div class="text_navbar">
-                <div class="border_one_text_navbar"><a href="{% url 'where_you_can_buy' %}"><h2 class="one_text_navbar">ГДЕ КУПИТЬ</h2></a></div>
-                <div class="border_one_text_navbar"><a href="{% url 'list_products' %}"><h2 class="one_text_navbar">ПРОДУКЦИЯ</h2></a></div>
-                <div class="border_one_text_navbar"><a href="{% url 'method_of_payment' %}"><h2 class="one_text_navbar">ДОСТАВКА И ОПЛАТА</h2></a></div>
-                <div class="border_one_text_navbar"><a href="{% url 'contacts' %}"><h2 class="one_text_navbar">КОНТАКТЫ</h2></a></div>
-                <div class="border_one_text_navbar"><a href="{% url 'about_us' %}"><h2 class="one_text_navbar">О НАС</h2></a></div>
+                <div class="border_one_text_navbar"><a href="{% url 'shop:where_you_can_buy' %}"><h2 class="one_text_navbar">ГДЕ КУПИТЬ</h2></a></div>
+                <div class="border_one_text_navbar"><a href="{% url 'shop:list_products' %}"><h2 class="one_text_navbar">ПРОДУКЦИЯ</h2></a></div>
+                <div class="border_one_text_navbar"><a href="{% url 'shop:method_of_payment' %}"><h2 class="one_text_navbar">ДОСТАВКА И ОПЛАТА</h2></a></div>
+                <div class="border_one_text_navbar"><a href="{% url 'shop:contacts' %}"><h2 class="one_text_navbar">КОНТАКТЫ</h2></a></div>
+                <div class="border_one_text_navbar"><a href="{% url 'shop:about_us' %}"><h2 class="one_text_navbar">О НАС</h2></a></div>
 
             </div>
         </nav>
@@ -74,10 +78,11 @@
             </div>
 
             <div class="sections_block">
-                <div ><a href="{% url 'where_you_can_buy' %}" class="section"><h3 class="section_text">Где купить</h3></a></div>
-                <div class="section"><a href="{% url 'FAQ' %}" class="section"><h3 class="section_text">FAQ</h3></a></div>
-                <div class="section"><a href="{% url 'method_of_payment' %}" class="section"><h3 class="section_text">Доставка и оплата</h3></a></div>
-                <div class="section"><a href="{% url 'contacts' %}" class="section"><h3 class="section_text">Контакты</h3></a></div>
+                <div ><a href="{% url 'shop:where_you_can_buy' %}" class="section"><h3 class="section_text">Где купить</h3></a></div>
+                <div class="section"><a href="{% url 'shop:FAQ' %}" class="section"><h3 class="section_text">FAQ</h3></a></div>
+                <div class="section"><a href="{% url 'shop:method_of_payment' %}" class="section"><h3 class="section_text">Доставка и оплата</h3></a></div>
+                <div class="section"><a href="{% url 'shop:contacts' %}" class="section"><h3 class="section_text">Контакты</h3></a></div>
+              	<div class="section"><a href="{% url 'shop:about_us' %}" class="section"><h3 class="section_text">О нас</h3></a></div>
                 
                 <div class="social_media_logos">
                     <a href="https://instagram.com/time_to_grow_spb?igshid=YmMyMTA2M2Y="><img src="{% static 'shop/img/instagram_logo.svg' %}" alt="" class="instagram_logo"></a>
@@ -91,7 +96,7 @@
                 </div>
                 <div id="optovie_zakazi">
                     <h2 class="phone_number_footer">+7 (981) 012-80-69</h2>
-                    <h2 class="text_prodazh_footer">оптовые продажи</h2>
+                    <h2 class="text_prodazh_footer">Оптовые продажи</h2>
                 </div>
             </div>
         </div>

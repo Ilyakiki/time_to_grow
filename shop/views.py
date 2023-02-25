@@ -1,24 +1,28 @@
-from django.shortcuts import render
+
 from .models import Product
-from django.shortcuts import render,get_object_or_404
+from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from itertools import chain
-from django.utils.text import slugify
 from cart.forms import CartAddProductForm
-# Create your views here.
 
 def where_buy(request):
+    '''Страница где купить'''
     return render(request,'shop/where_you_can_buy.html')
 
 def contacts(request):
+    '''Страница с контактами'''
     return render(request,'shop/contacts.html')
 def homepage(request):
+    '''Главная страница'''
     return render(request,'shop/homepage.html')
 def about_us(request):
+    '''Страница о нас'''
     return render(request,'shop/about_us.html')
 def FAQ(request):
+    '''Страница FAQ'''
     return render(request,'shop/FAQ.html')
 def method_of_payment(requets):
+    '''Страница Доставка и оплата'''
     return render(requets,'shop/method_of_payment.html')
 class ListProducts(ListView):
     '''Список Товаров'''
@@ -29,12 +33,12 @@ class ListProducts(ListView):
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        queryset = queryset.filter(available=True)
+        queryset = queryset.filter(available=True) #Отображаем только те товары,которые доступны
         return queryset
 
     def get_context_data(self, *args, object_list=None, **kwargs):
         context = super(ListProducts, self).get_context_data(**kwargs)
-        context['form'] = CartAddProductForm
+        context['form'] = CartAddProductForm #передаем форму в контекст
         return context
 
 
@@ -52,9 +56,6 @@ class DetailProduct(DetailView):
     template_name = 'shop/detail_product.html'
     model = Product
     def get_context_data(self,*args, **kwargs):
-        '''self.object.structure= self.object.structure.split('\r\n')
-        self.object.description_text=self.object.description_text.split('\r\n')
-        self.object.method_of_application = self.object.method_of_application.split('\r\n')''' """дописать"""
         context = super(DetailProduct, self).get_context_data(**kwargs)
         context['object'].structure = context['object'].structure.split('\r\n')
         context['object'].description_text=context['object'].description_text.split('\r\n')
@@ -88,5 +89,5 @@ class Search(ListView):
     def get_context_data(self, *args, **kwargs):
         context = super().get_context_data(*args, **kwargs)
         context['q'] = f'{self.request.GET.get("q")}&'
-        context['form'] = CartAddProductForm
+        context['form'] = CartAddProductForm #передаем форму в контеккст
         return context

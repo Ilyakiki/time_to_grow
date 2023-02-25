@@ -8,16 +8,16 @@ namespace {
         SDEKService\Settings::factory(
             /** Настройте приоритет тарифов курьерской доставки */
             /** Set up the priority of courier delivery tariffs */
-            array(233, 137, 139, 16, 18, 11, 1, 3, 61, 60, 59, 58, 57, 83),
+            array(137,233,139, 16, 18, 11, 1, 3, 61, 60, 59, 58, 57, 83),
             /** Настройте приоритет тарифов доставки до пунктов выдачи */
             /** Set the priority of delivery tariffs to pick-up points */
-            array(234, 136, 138, 15, 17, 10, 12, 5, 62, 63),
+            array(136,234,138, 15, 17, 10, 12, 5, 62, 63),
             /** Вставьте свой аккаунт\идентификатор для интеграции */
             /** Put your account for integration here */
-            '',
+            'BItvuLgUdcfKZQgzHk2VA3s2R6XXUBka',
             /** Вставьте свой пароль для интеграции */
             /** Put your password for integration here */
-            ''
+            'EwIJZsHhJUkYVbjpDO5gKquRJHZ9Q693'
         )
     );
 }
